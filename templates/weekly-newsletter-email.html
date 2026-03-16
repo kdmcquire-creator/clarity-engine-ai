@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly SEO Insights</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9fafb;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #ffffff;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 28px;
+            font-weight: 700;
+        }
+        .header p {
+            margin: 10px 0 0 0;
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        .content {
+            padding: 40px 30px;
+        }
+        .greeting {
+            font-size: 18px;
+            color: #1f2937;
+            margin-bottom: 20px;
+        }
+        .article {
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            background-color: #f9fafb;
+            transition: box-shadow 0.3s;
+        }
+        .article:hover {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .article h3 {
+            margin: 0 0 10px 0;
+            color: #667eea;
+            font-size: 18px;
+            line-height: 1.4;
+        }
+        .article p {
+            margin: 10px 0;
+            color: #666;
+            font-size: 14px;
+        }
+        .article-link {
+            display: inline-block;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 10px;
+            transition: color 0.3s;
+        }
+        .article-link:hover {
+            color: #5568d3;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: #667eea;
+            color: #ffffff;
+            padding: 12px 30px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            margin: 20px 0;
+            transition: background-color 0.3s;
+        }
+        .cta-button:hover {
+            background-color: #5568d3;
+        }
+        .highlight {
+            background-color: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 20px 0;
+        }
+        .highlight h3 {
+            margin-top: 0;
+            color: #d97706;
+        }
+        .section {
+            margin: 30px 0;
+            padding: 20px;
+            background-color: #f3f4f6;
+            border-radius: 6px;
+            border-left: 4px solid #667eea;
+        }
+        .section h2 {
+            margin-top: 0;
+            color: #667eea;
+            font-size: 18px;
+        }
+        .section p {
+            margin: 10px 0;
+            color: #555;
+        }
+        .footer {
+            background-color: #f9fafb;
+            padding: 30px;
+            text-align: center;
+            border-top: 1px solid #e5e7eb;
+            font-size: 12px;
+            color: #6b7280;
+        }
+        .footer a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        .divider {
+            height: 1px;
+            background-color: #e5e7eb;
+            margin: 30px 0;
+        }
+        .stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .stat-box {
+            background-color: #f3f4f6;
+            padding: 15px;
+            border-radius: 6px;
+            text-align: center;
+            border: 1px solid #e5e7eb;
+        }
+        .stat-number {
+            font-size: 24px;
+            font-weight: bold;
+            color: #667eea;
+        }
+        .stat-label {
+            font-size: 12px;
+            color: #666;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>📊 Weekly SEO Insights</h1>
+            <p>Your dose of SEO strategies, tips, and industry trends</p>
+        </div>
+
+        <!-- Content -->
+        <div class="content">
+            <p class="greeting">Hi {{firstName}},</p>
+            
+            <p>Welcome to this week's edition of Clarity Engine's SEO Insights! We've curated the best content to help you master your SEO strategy and stay ahead of the competition.</p>
+
+            <!-- Featured Article -->
+            <div class="highlight">
+                <h3>🌟 Featured This Week</h3>
+                <p>Discover the latest trends, tools, and techniques that are shaping the SEO landscape. Our experts have compiled actionable insights to boost your rankings.</p>
+            </div>
+
+            <!-- Articles Section -->
+            <h2 style="color: #1f2937; margin-top: 30px; margin-bottom: 20px;">📚 Top Articles</h2>
+
+            {{#each articles}}
+            <div class="article">
+                <h3>{{this.title}}</h3>
+                <p>{{this.excerpt}}</p>
+                <a href="{{this.link}}" class="article-link">Read Full Article →</a>
+            </div>
+            {{/each}}
+
+            <!-- Stats Section -->
+            <div class="section">
+                <h2>📈 Industry Stats This Week</h2>
+                <div class="stats">
+                    <div class="stat-box">
+                        <div class="stat-number">2.4M</div>
+                        <div class="stat-label">Searches/Day</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">+15%</div>
+                        <div class="stat-label">Mobile Traffic</div>
+                    </div>
+                </div>
+                <p>The SEO landscape continues to evolve. Stay updated with the latest algorithm changes and best practices.</p>
+            </div>
+
+            <!-- Tools Spotlight -->
+            <div class="section">
+                <h2>🛠️ Tool Spotlight</h2>
+                <p><strong>Keyword Density Checker:</strong> Optimize your content with precision. Analyze keyword distribution and get recommendations for better SEO performance.</p>
+                <p style="text-align: center;">
+                    <a href="https://clarity-engine.ai/tools/keyword-density" class="cta-button">Try Now</a>
+                </p>
+            </div>
+
+            <!-- Pro Tips -->
+            <div class="section">
+                <h2>💡 Pro Tips</h2>
+                <ul style="margin: 10px 0; padding-left: 20px;">
+                    <li>Focus on user intent, not just keywords</li>
+                    <li>Build topical authority with pillar content</li>
+                    <li>Monitor your Core Web Vitals regularly</li>
+                    <li>Create content clusters for better internal linking</li>
+                </ul>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- CTA -->
+            <div style="text-align: center; margin: 30px 0;">
+                <p style="color: #666; margin-bottom: 15px;">Ready to optimize your SEO strategy?</p>
+                <a href="https://clarity-engine.ai/dashboard" class="cta-button">Access All Tools</a>
+            </div>
+
+            <!-- Preferences -->
+            <p style="color: #666; font-size: 14px; text-align: center;">
+                Want to change how often you receive these emails? <a href="https://clarity-engine.ai/email-preferences" style="color: #667eea; text-decoration: none;">Manage your preferences</a>
+            </p>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p style="margin: 0 0 10px 0;">
+                <strong>Clarity Engine</strong><br>
+                Master Your SEO with Free, Powerful Tools
+            </p>
+            <p style="margin: 10px 0;">
+                <a href="https://clarity-engine.ai">Visit Our Website</a> | 
+                <a href="https://clarity-engine.ai/resources">Resources</a> | 
+                <a href="https://clarity-engine.ai/contact">Contact Us</a>
+            </p>
+            <p style="margin: 10px 0;">
+                You're receiving this email because you subscribed to our weekly newsletter.<br>
+                <a href="{{unsubscribeLink}}">Unsubscribe</a> | <a href="https://clarity-engine.ai/email-preferences">Manage Preferences</a>
+            </p>
+            <p style="margin: 10px 0; font-size: 11px;">
+                © 2026 Clarity Engine. All rights reserved.<br>
+                Made with ❤️ for SEO professionals
+            </p>
+        </div>
+    </div>
+</body>
+</html>
