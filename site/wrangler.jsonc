@@ -2,6 +2,7 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "main": ".open-next/worker.js",
   "name": "clarity-engine-ai",
+  "account_id": "3582b6bec8f0d717e1d4a926447647b6",
   "compatibility_date": "2025-09-27",
   "compatibility_flags": ["nodejs_compat"],
   "assets": {
