@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SiteGroundBanner from "@/components/SiteGroundBanner";
 import { posts, getPostBySlug, postContent } from "@/lib/blog";
 import type { Metadata } from "next";
 
@@ -160,6 +161,9 @@ export default async function BlogPostPage({ params }: Props) {
           <article className="prose prose-invert max-w-none">
             {renderContent(content)}
           </article>
+
+          {/* SiteGround banner */}
+          <SiteGroundBanner />
 
           {/* CTA */}
           <div className="mt-12 bg-gradient-to-br from-blue-900/40 to-navy-800 border border-blue-800/40 rounded-2xl p-6 text-center">
