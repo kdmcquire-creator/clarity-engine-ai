@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://clarity-engine.ai/sitemap.xml

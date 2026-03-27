@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap');
+
+:root {
+  --navy-900: #0a0f1e;
+  --navy-800: #0d1526;
+  --blue-600: #2563eb;
+  --cyan-400: #22d3ee;
+}
+
+body {
+  background-color: var(--navy-900);
+  color: white;
+}

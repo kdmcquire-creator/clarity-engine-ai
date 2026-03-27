@@ -1,0 +1,9 @@
+node_modules/
+.next/
+.open-next/
+dist/
+site/node_modules/
+site/.next/
+site/.open-next/
+*.env.local
+.env
