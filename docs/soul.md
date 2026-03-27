@@ -13,7 +13,7 @@
 
 ## Key URLs
 - **Live URL**: https://clarity-engine.ai
-- **Backup URL**: https://seotools-gashekdy.manus.space
+- **Backup URL**: https://clarity-engine.ai
 - **Project Path**: /home/ubuntu/seo-tool-cluster
 - **Latest Checkpoint**: manus-webdev://b38c9f99
 

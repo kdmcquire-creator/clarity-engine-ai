@@ -100,7 +100,7 @@ npm start
 Clarity Engine is currently deployed on the Manus Platform. 
 
 - **Live URL**: https://clarity-engine.ai
-- **Backup URL**: https://clarityseo-ccnmbqej.manus.space
+- **Backup URL**: https://clarity-engine.ai
 - **DNS**: Managed via Cloudflare
 
 To deploy updates, push changes to the main branch or use the Manus deployment pipeline. Ensure all environment variables are properly configured in the production environment.

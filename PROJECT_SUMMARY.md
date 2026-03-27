@@ -63,7 +63,7 @@ The platform features a comprehensive suite of 17 functional SEO tools, divided 
 
 ## Deployment Info
 - **Live URL**: [https://clarity-engine.ai](https://clarity-engine.ai)
-- **Backup URL**: [https://clarityseo-ccnmbqej.manus.space](https://clarityseo-ccnmbqej.manus.space)
+- **Backup URL**: [https://clarity-engine.ai](https://clarity-engine.ai)
 - **Project ID**: CCnMBqEj3duTnGH6Lgo2SW
 - **Latest Checkpoint**: 9822bcdd
 - **Hosting**: Manus Platform with custom domain via Cloudflare DNS
@@ -99,7 +99,7 @@ The platform features a comprehensive suite of 17 functional SEO tools, divided 
 - Established project context and read the `soul.md` file to understand user preferences and critical issues.
 - Extracted and organized 190 project files from the provided archive.
 - Fixed 6 critical bugs: moved author bio to the bottom of articles, stripped HTML from teaser cards, fixed sticky header transparency, updated browser tab title, removed welcome tour modal, and fixed broken tool links.
-- Deployed the initial fixes to a new Manus subdomain (`clarityseo-ccnmbqej.manus.space`).
+- Deployed the initial fixes to the production domain (`clarity-engine.ai`).
 - Implemented functional logic for 7 frontend-only tools (Keyword Density, Meta Tag, Readability, Schema Markup, Heading Analyzer, Title Tag, URL Structure).
 - Wired up 6 AI-powered tools (Content Outline, Content Gap, Backlink, Internal Link, Page Speed, Competitor Tracker).
 - Completed the final 4 tools (Mobile Friendliness, Keyword Research, SERP Simulator, Duplicate Content).
