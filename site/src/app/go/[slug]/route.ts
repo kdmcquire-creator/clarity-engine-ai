@@ -10,6 +10,7 @@ const staticLinks: Record<string, string> = {
   moz: "https://moz.com/?ref=clarityengine",
   mangools: "https://mangools.com/?ref=clarityengine",
   amazon: "https://www.amazon.com/?tag=clarityengine-20",
+  siteground: "https://www.siteground.com/index.htm?afcode=758135cea38bbc354897accd3183d9ff",
 };
 
 function resolveDestination(slug: string): string | undefined {
