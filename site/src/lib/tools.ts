@@ -6,6 +6,9 @@ export type SeoTool = {
   shortDesc: string;
   isFrontendOnly: boolean;
   features: string[];
+  affiliateUrl?: string;
+  websiteUrl?: string;
+  ctaLabel?: string;
 };
 
 export const toolCategories = [
@@ -183,6 +186,9 @@ export const tools: SeoTool[] = [
       "Link quality estimation",
       "Actionable recommendations",
     ],
+    affiliateUrl: "https://www.semrush.com/sem/?ref=clarityengine",
+    websiteUrl: "https://www.semrush.com",
+    ctaLabel: "Try Semrush Backlink Audit Free",
   },
   {
     slug: "content-gap-analyzer",
@@ -198,6 +204,9 @@ export const tools: SeoTool[] = [
       "Keyword opportunity scoring",
       "Content brief generation",
     ],
+    affiliateUrl: "https://surferseo.com/?via=clarityengine",
+    websiteUrl: "https://surferseo.com",
+    ctaLabel: "Try Surfer SEO Content Gap Free",
   },
   {
     slug: "content-outline-generator",
@@ -213,6 +222,9 @@ export const tools: SeoTool[] = [
       "Word count recommendations",
       "Search intent analysis",
     ],
+    affiliateUrl: "https://surferseo.com/?via=clarityengine",
+    websiteUrl: "https://surferseo.com",
+    ctaLabel: "Write Full Articles with Surfer SEO",
   },
   {
     slug: "internal-link-analyzer",
@@ -228,6 +240,9 @@ export const tools: SeoTool[] = [
       "Orphan page detection",
       "AI recommendations",
     ],
+    affiliateUrl: "https://ahrefs.com/?ref=clarityengine",
+    websiteUrl: "https://ahrefs.com",
+    ctaLabel: "Audit Your Site with Ahrefs",
   },
   {
     slug: "page-speed-checker",
@@ -243,6 +258,9 @@ export const tools: SeoTool[] = [
       "Priority action list",
       "Before/after projections",
     ],
+    affiliateUrl: "https://www.semrush.com/sem/?ref=clarityengine",
+    websiteUrl: "https://www.semrush.com",
+    ctaLabel: "Full Site Audit with Semrush",
   },
   {
     slug: "competitor-tracker",
@@ -258,6 +276,9 @@ export const tools: SeoTool[] = [
       "Keyword gap reporting",
       "Strategic recommendations",
     ],
+    affiliateUrl: "https://www.semrush.com/sem/?ref=clarityengine",
+    websiteUrl: "https://www.semrush.com",
+    ctaLabel: "Track Competitors with Semrush",
   },
   {
     slug: "keyword-research-tool",
@@ -273,6 +294,9 @@ export const tools: SeoTool[] = [
       "Difficulty estimation",
       "Content format suggestions",
     ],
+    affiliateUrl: "https://ahrefs.com/?ref=clarityengine",
+    websiteUrl: "https://ahrefs.com",
+    ctaLabel: "Deep Keyword Research with Ahrefs",
   },
 ];
 

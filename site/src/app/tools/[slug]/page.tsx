@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useState, useCallback } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import AffiliateBlock from "@/components/AffiliateBlock";
 import { tools, getToolBySlug } from "@/lib/tools";
 
 // ─── Utility helpers ──────────────────────────────────────────────────────────
@@ -1377,6 +1378,12 @@ export default function ToolPage() {
           <div className="bg-white/5 border border-white/10 rounded-2xl p-6 md:p-8">
             <ToolRenderer slug={slug} />
           </div>
+
+          {/* Affiliate CTA */}
+          <AffiliateBlock
+            toolSlug={slug}
+            ctaLabel={tool.ctaLabel}
+          />
 
           {/* Related tools */}
           <div className="mt-12">
