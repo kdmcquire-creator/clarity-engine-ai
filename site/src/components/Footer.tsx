@@ -97,6 +97,17 @@ export default function Footer() {
           </div>
         </div>
         <div className="border-t border-white/10 pt-6 text-center text-white/40 text-sm">
+          <p className="text-xs text-white/25 mb-3">
+            <a
+              href="/go/amazon/"
+              target="_blank"
+              rel="nofollow noopener sponsored"
+              className="hover:text-cyan-400 transition"
+            >
+              🛒 Amazon Associate
+            </a>
+            {" "}· As an Amazon Associate I earn from qualifying purchases.
+          </p>
           © {year} Clarity Engine. All rights reserved.
           <span className="mx-2">·</span>
           <a

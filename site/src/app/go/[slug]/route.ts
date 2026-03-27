@@ -9,6 +9,7 @@ const staticLinks: Record<string, string> = {
   surfer: "https://surferseo.com/?via=clarityengine",
   moz: "https://moz.com/?ref=clarityengine",
   mangools: "https://mangools.com/?ref=clarityengine",
+  amazon: "https://www.amazon.com/?tag=clarityengine-20",
 };
 
 function resolveDestination(slug: string): string | undefined {
