@@ -1,8 +1,6 @@
 import Anthropic from "@anthropic-ai/sdk";
 import { NextRequest } from "next/server";
 
-export const runtime = "edge";
-
 if (!process.env.ANTHROPIC_API_KEY) {
   // Warn at module load time (visible in logs) but don't throw — the POST handler returns 503.
   console.warn("ANTHROPIC_API_KEY is not set. AI tool endpoints will return 503.");
