@@ -400,7 +400,7 @@ Vary your anchor text naturally. Using the exact same anchor text for every inte
 
 The fastest method: use Google Search Console to identify your highest-authority pages (those with the most external backlinks), then search your site for content that could logically link to your priority target pages. Any page discussing a related topic is a candidate.
 
-A simple site search works well: `site:yourdomain.com "topic keyword"` in Google returns pages on your site mentioning that topic. Scan these for natural linking opportunities.
+A simple site search works well: 'site:yourdomain.com "topic keyword"' in Google returns pages on your site mentioning that topic. Scan these for natural linking opportunities.
 
 ## Link Placement Matters
 
@@ -502,7 +502,7 @@ Some clusters belong together in a larger topic group. Map your clusters into a 
 
 ## Identifying Cannibalization Risks
 
-Before writing new content, check whether any existing pages already target keywords in your cluster. Use Google Search Console's URL inspection tool, or search `site:yourdomain.com [keyword]` to surface competing pages.
+Before writing new content, check whether any existing pages already target keywords in your cluster. Use Google Search Console's URL inspection tool, or search 'site:yourdomain.com [keyword]' to surface competing pages.
 
 When you find cannibalization: consolidate thin overlapping pages into one comprehensive piece, redirect the weaker page to the stronger, and update internal links to point to the consolidated URL.
 
@@ -542,7 +542,7 @@ LCP is usually the hardest Core Web Vital to improve because it depends on multi
 - Serve images in modern formats (WebP, AVIF) and compress aggressively
 - Use a CDN to reduce server distance latency
 - Eliminate render-blocking CSS and JavaScript
-- Preload your LCP image with `<link rel="preload">` in the page `<head>`
+- Preload your LCP image with a "link rel=preload" tag in the page head
 - Upgrade hosting if your Time to First Byte (TTFB) exceeds 600ms
 
 ## Cumulative Layout Shift (CLS)
@@ -553,8 +553,8 @@ CLS is almost always caused by images and embeds without explicit dimensions, dy
 
 **How to improve CLS:**
 - Add explicit width and height attributes to all images and video elements
-- Reserve space for ads, embeds, and dynamic content using CSS `aspect-ratio` or fixed dimensions
-- Use `font-display: optional` or `font-display: swap` to prevent font-induced layout shifts
+- Reserve space for ads, embeds, and dynamic content using CSS aspect-ratio or fixed dimensions
+- Use font-display: optional or font-display: swap to prevent font-induced layout shifts
 - Avoid inserting content above existing content after page load
 
 ## Interaction to Next Paint (INP)
