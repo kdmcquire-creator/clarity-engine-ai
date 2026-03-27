@@ -3,6 +3,7 @@ import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SiteGroundBanner from "@/components/SiteGroundBanner";
+import SiteGroundLeaderboard from "@/components/SiteGroundLeaderboard";
 import { posts, getPostBySlug, postContent } from "@/lib/blog";
 import type { Metadata } from "next";
 
@@ -156,6 +157,9 @@ export default async function BlogPostPage({ params }: Props) {
               </div>
             </div>
           </header>
+
+          {/* Leaderboard above article */}
+          <SiteGroundLeaderboard />
 
           {/* Article body */}
           <article className="prose prose-invert max-w-none">

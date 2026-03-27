@@ -6,6 +6,7 @@ import { useState, useCallback } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AffiliateBlock from "@/components/AffiliateBlock";
+import SiteGroundHalfPage from "@/components/SiteGroundHalfPage";
 import { tools, getToolBySlug } from "@/lib/tools";
 
 // ─── Utility helpers ──────────────────────────────────────────────────────────
@@ -1384,6 +1385,9 @@ export default function ToolPage() {
             toolSlug={slug}
             ctaLabel={tool.ctaLabel}
           />
+
+          {/* Half-page banner */}
+          <SiteGroundHalfPage />
 
           {/* Related tools */}
           <div className="mt-12">
