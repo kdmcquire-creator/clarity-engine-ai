@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -15,6 +16,11 @@ export const metadata: Metadata = {
     locale: "en_US",
   },
   twitter: { card: "summary_large_image", site: "@ClarityEngineAI" },
+  verification: {
+    other: {
+      "google-adsense-account": ["ca-pub-5995172189982724"],
+    },
+  },
 };
 
 // Trusted, static GTM snippet — not user-controlled content
@@ -33,10 +39,11 @@ export default function RootLayout({
         {/* eslint-disable-next-line @next/next/no-before-interactive-script-outside-document */}
         <script dangerouslySetInnerHTML={{ __html: gtmScript }} />
         {/* Google AdSense */}
-        <script
+        <Script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5995172189982724"
           crossOrigin="anonymous"
+          strategy="afterInteractive"
         />
       </head>
       <body className="bg-navy-900 text-white min-h-screen">
