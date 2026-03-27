@@ -15,5 +15,9 @@
       "service": "clarity-engine-ai"
     }
   ],
+  "routes": [
+    { "pattern": "clarity-engine.ai/*", "zone_name": "clarity-engine.ai" },
+    { "pattern": "www.clarity-engine.ai/*", "zone_name": "clarity-engine.ai" }
+  ],
   "observability": { "enabled": true }
 }
