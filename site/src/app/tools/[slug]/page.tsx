@@ -1026,54 +1026,259 @@ function MobileFriendlinessTool() {
   );
 }
 
-function AiToolPlaceholder({ tool }: { tool: { name: string; description: string; features: string[] } }) {
-  const [input, setInput] = useState("");
-  const [submitted, setSubmitted] = useState(false);
+// ─── AI streaming hook ────────────────────────────────────────────────────────────────
 
+function useStreamingResult() {
+  const [result, setResult] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [done, setDone] = useState(false);
+
+  const run = useCallback(async (tool: string, inputs: Record<string, string>) => {
+    setResult("");
+    setLoading(true);
+    setDone(false);
+    try {
+      const res = await fetch("/api/tools", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ tool, ...inputs }),
+      });
+      if (!res.ok) throw new Error("API error");
+      const reader = res.body!.getReader();
+      const decoder = new TextDecoder();
+      while (true) {
+        const { done: d, value } = await reader.read();
+        if (d) break;
+        setResult((prev) => prev + decoder.decode(value));
+      }
+      setDone(true);
+    } catch {
+      setResult("Error running analysis. Please try again.");
+      setDone(true);
+    } finally {
+      setLoading(false);
+    }
+  }, []);
+
+  return { result, loading, done, run };
+}
+
+// ─── Markdown renderer ──────────────────────────────────────────────────────────────
+// Content is HTML-escaped (&, <, >) before template injection, preventing XSS.
+
+function renderMarkdown(text: string): string {
+  const lines = text.split("\n");
+  const html: string[] = [];
+  for (const raw of lines) {
+    let line = raw
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;");
+    if (/^##\s+/.test(line)) {
+      const inner = line.replace(/^##\s+/, "").replace(/\*\*(.+?)\*\*/g, '<strong class="text-white">$1</strong>');
+      html.push(`<h3 class="text-white font-bold mt-4 mb-2 text-base">${inner}</h3>`);
+      continue;
+    }
+    if (/^#\s+/.test(line)) {
+      const inner = line.replace(/^#\s+/, "").replace(/\*\*(.+?)\*\*/g, '<strong class="text-white">$1</strong>');
+      html.push(`<h2 class="text-white font-bold mt-5 mb-2 text-lg">${inner}</h2>`);
+      continue;
+    }
+    if (/^\d+\.\s+/.test(line)) {
+      const inner = line.replace(/^\d+\.\s+/, "").replace(/\*\*(.+?)\*\*/g, '<strong class="text-white">$1</strong>');
+      html.push(`<div class="flex gap-2 text-sm mb-1"><span class="text-cyan-400 shrink-0">&#8226;</span><span class="text-white/70">${inner}</span></div>`);
+      continue;
+    }
+    if (/^[-*]\s+/.test(line)) {
+      const inner = line.replace(/^[-*]\s+/, "").replace(/\*\*(.+?)\*\*/g, '<strong class="text-white">$1</strong>');
+      html.push(`<div class="flex gap-2 text-sm mb-1 ml-3"><span class="text-cyan-400 shrink-0">&#8226;</span><span class="text-white/70">${inner}</span></div>`);
+      continue;
+    }
+    if (line.trim() === "") {
+      html.push('<div class="mb-1"></div>');
+      continue;
+    }
+    const inner = line.replace(/\*\*(.+?)\*\*/g, '<strong class="text-white">$1</strong>');
+    html.push(`<p class="text-white/70 text-sm mb-2">${inner}</p>`);
+  }
+  return html.join("");
+}
+
+// ─── Shared AI result display ────────────────────────────────────────────────────────────────
+
+function AiResultBox({ result, loading, done }: { result: string; loading: boolean; done: boolean }) {
+  if (!result && !loading) return null;
+  return (
+    <ResultBox>
+      <div className="flex items-center justify-between mb-3">
+        <span className="text-xs font-medium text-white/40 uppercase tracking-wider">AI Analysis</span>
+        <div className="flex items-center gap-2">
+          {loading && (
+            <span className="flex items-center gap-1.5 text-xs text-cyan-400">
+              <svg className="animate-spin w-3 h-3" fill="none" viewBox="0 0 24 24">
+                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z" />
+              </svg>
+              Generating...
+            </span>
+          )}
+          {done && result && (
+            <Button variant="secondary" onClick={() => copyToClipboard(result)}>
+              Copy Results
+            </Button>
+          )}
+        </div>
+      </div>
+      <div
+        className="prose-output"
+        dangerouslySetInnerHTML={{ __html: renderMarkdown(result) }}
+      />
+    </ResultBox>
+  );
+}
+
+// ─── AI tool components ───────────────────────────────────────────────────────────────────
+
+function BacklinkAnalyzerTool() {
+  const [domain, setDomain] = useState("");
+  const { result, loading, done, run } = useStreamingResult();
   return (
     <div>
-      <div className="flex items-center gap-2 mb-4">
-        <span className="bg-blue-900/50 text-blue-400 border border-blue-800/50 text-xs px-3 py-1 rounded-full font-medium">
-          AI-Powered
-        </span>
-        <span className="text-xs text-white/40">Requires AI processing</span>
-      </div>
-      <p className="text-white/60 text-sm mb-4">{tool.description}</p>
-      <Label>Enter your input</Label>
-      <TextArea
-        value={input}
-        onChange={setInput}
-        placeholder="Enter your domain, keyword, or content to analyze..."
-        rows={4}
-      />
+      <Label>Domain to analyze</Label>
+      <Input value={domain} onChange={setDomain} placeholder="example.com" />
       <div className="mt-3">
-        <Button onClick={() => setSubmitted(true)}>Run AI Analysis</Button>
+        <Button onClick={() => run("backlink-analyzer", { domain })}>
+          {loading ? "Analyzing..." : "Analyze Backlinks"}
+        </Button>
       </div>
-      {submitted && (
-        <ResultBox>
-          <div className="text-center py-6">
-            <div className="w-12 h-12 rounded-full bg-blue-600/20 border border-blue-600/30 flex items-center justify-center mx-auto mb-3">
-              <span className="text-2xl">🤖</span>
-            </div>
-            <h3 className="font-semibold text-white mb-2">AI Analysis Ready</h3>
-            <p className="text-white/50 text-sm max-w-sm mx-auto">
-              This tool uses the Anthropic Claude API to generate insights. Connect your API key in the settings to enable full AI analysis.
-            </p>
-            <div className="mt-4 grid grid-cols-2 gap-2 text-left max-w-sm mx-auto">
-              {tool.features.map((f) => (
-                <div key={f} className="flex items-center gap-2 text-xs text-white/50">
-                  <span className="text-cyan-400">✓</span> {f}
-                </div>
-              ))}
-            </div>
-          </div>
-        </ResultBox>
-      )}
+      <AiResultBox result={result} loading={loading} done={done} />
     </div>
   );
 }
 
-// ─── Tool router ──────────────────────────────────────────────────────────────
+function ContentGapAnalyzerTool() {
+  const [topic, setTopic] = useState("");
+  const [competitors, setCompetitors] = useState("");
+  const { result, loading, done, run } = useStreamingResult();
+  return (
+    <div>
+      <Label>Your Topic</Label>
+      <Input value={topic} onChange={setTopic} placeholder="e.g. email marketing for SaaS" />
+      <div className="mt-4">
+        <Label>Competitor URLs or context (optional)</Label>
+        <TextArea
+          value={competitors}
+          onChange={setCompetitors}
+          placeholder="e.g. mailchimp.com, convertkit.com -- or describe your niche"
+          rows={3}
+        />
+      </div>
+      <div className="mt-3">
+        <Button onClick={() => run("content-gap-analyzer", { topic, competitors })}>
+          {loading ? "Analyzing..." : "Find Content Gaps"}
+        </Button>
+      </div>
+      <AiResultBox result={result} loading={loading} done={done} />
+    </div>
+  );
+}
+
+function ContentOutlineGeneratorTool() {
+  const [keyword, setKeyword] = useState("");
+  const { result, loading, done, run } = useStreamingResult();
+  return (
+    <div>
+      <Label>Target keyword</Label>
+      <Input value={keyword} onChange={setKeyword} placeholder="e.g. best project management software" />
+      <div className="mt-3">
+        <Button onClick={() => run("content-outline-generator", { keyword })}>
+          {loading ? "Generating..." : "Generate Outline"}
+        </Button>
+      </div>
+      <AiResultBox result={result} loading={loading} done={done} />
+    </div>
+  );
+}
+
+function InternalLinkAnalyzerTool() {
+  const [content, setContent] = useState("");
+  const { result, loading, done, run } = useStreamingResult();
+  return (
+    <div>
+      <Label>Paste your content or HTML to analyze</Label>
+      <TextArea
+        value={content}
+        onChange={setContent}
+        placeholder="Paste your article content or page HTML here..."
+        rows={10}
+      />
+      <div className="mt-3">
+        <Button onClick={() => run("internal-link-analyzer", { content })}>
+          {loading ? "Analyzing..." : "Analyze Internal Links"}
+        </Button>
+      </div>
+      <AiResultBox result={result} loading={loading} done={done} />
+    </div>
+  );
+}
+
+function PageSpeedCheckerTool() {
+  const [url, setUrl] = useState("");
+  const { result, loading, done, run } = useStreamingResult();
+  return (
+    <div>
+      <Label>URL to analyze</Label>
+      <Input value={url} onChange={setUrl} placeholder="https://example.com/page" />
+      <div className="mt-3">
+        <Button onClick={() => run("page-speed-checker", { url })}>
+          {loading ? "Analyzing..." : "Check Page Speed"}
+        </Button>
+      </div>
+      <AiResultBox result={result} loading={loading} done={done} />
+    </div>
+  );
+}
+
+function CompetitorTrackerTool() {
+  const [domains, setDomains] = useState("");
+  const { result, loading, done, run } = useStreamingResult();
+  return (
+    <div>
+      <Label>Competitor domains (one per line)</Label>
+      <TextArea
+        value={domains}
+        onChange={setDomains}
+        placeholder={"competitor1.com\ncompetitor2.com\ncompetitor3.com"}
+        rows={5}
+      />
+      <div className="mt-3">
+        <Button onClick={() => run("competitor-tracker", { domains })}>
+          {loading ? "Analyzing..." : "Analyze Competitors"}
+        </Button>
+      </div>
+      <AiResultBox result={result} loading={loading} done={done} />
+    </div>
+  );
+}
+
+function KeywordResearchTool() {
+  const [keyword, setKeyword] = useState("");
+  const { result, loading, done, run } = useStreamingResult();
+  return (
+    <div>
+      <Label>Seed keyword</Label>
+      <Input value={keyword} onChange={setKeyword} placeholder="e.g. content marketing" />
+      <div className="mt-3">
+        <Button onClick={() => run("keyword-research-tool", { keyword })}>
+          {loading ? "Researching..." : "Research Keywords"}
+        </Button>
+      </div>
+      <AiResultBox result={result} loading={loading} done={done} />
+    </div>
+  );
+}
+
+// ─── Tool router ──────────────────────────────────────────────────────────────────────────────────
 
 function ToolRenderer({ slug }: { slug: string }) {
   switch (slug) {
@@ -1087,14 +1292,16 @@ function ToolRenderer({ slug }: { slug: string }) {
     case "serp-simulator": return <SerpSimulatorTool />;
     case "duplicate-content-detector": return <DuplicateContentTool />;
     case "mobile-friendliness-checker": return <MobileFriendlinessTool />;
-    default: {
-      const tool = getToolBySlug(slug);
-      if (!tool) return null;
-      return <AiToolPlaceholder tool={tool} />;
-    }
+    case "backlink-analyzer": return <BacklinkAnalyzerTool />;
+    case "content-gap-analyzer": return <ContentGapAnalyzerTool />;
+    case "content-outline-generator": return <ContentOutlineGeneratorTool />;
+    case "internal-link-analyzer": return <InternalLinkAnalyzerTool />;
+    case "page-speed-checker": return <PageSpeedCheckerTool />;
+    case "competitor-tracker": return <CompetitorTrackerTool />;
+    case "keyword-research-tool": return <KeywordResearchTool />;
+    default: return null;
   }
 }
-
 // ─── Page ─────────────────────────────────────────────────────────────────────
 
 export default function ToolPage() {
