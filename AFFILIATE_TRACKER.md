@@ -43,6 +43,7 @@
 | **Resso.ai** | Awin (`awinmid=85741`) | `awinaffid=2805304` | — | — | PH |
 | **Cloudways** | Direct | `id=2102009` | $30+7% recurring or up to $125/sale | 90 days | FH |
 | **Bluehost** | Impact.com | `sjv.io/NG93NP` | $65/sale | 90 days | PH, FH |
+| **NordVPN** | Impact.com | ⏳ Link needed — approved, not wired | ~40% new subscriptions | 30 days | PH (primary), FH, CE, LT |
 
 ---
 
@@ -181,6 +182,7 @@ Click-through goes to `/go/amazon` → site-specific tracking tag.
 
 ### 🟠 High Value — Apply Now
 
+- [ ] **NordVPN — wire tracking link** — Approved on Impact. Send Impact tracking link → add `/go/nordvpn` slug to PH, FH, CE, LT routes. Primary placement: PH tool pages + FH blog sidebar.
 - [ ] **Apply to Semrush BeRush** — $200/sale. Check if CE traffic qualifies at semrush.com/lp/affiliate-program/en/
 - [ ] **Apply to Surfer SEO affiliate** — 25% recurring. surferseo.com/affiliate-program/
 - [x] **Mangools** — ✅ Approved. ID `a69b590a66aee08840d5414cd` wired. Banners: KWFinder, SERPChecker, SiteProfiler (250×250 iframes).
