@@ -10,15 +10,21 @@ import SiteGroundHalfPage from "@/components/SiteGroundHalfPage";
 import MangoolsBanner from "@/components/MangoolsBanner";
 import { tools, getToolBySlug } from "@/lib/tools";
 
-// Map each CE tool slug to the most relevant Mangools product
-const MANGOOLS_TOOL_MAP: Record<string, "kwfinder" | "serpchecker" | "siteprofiler" | "serpwatcher" | "linkminer"> = {
-  "keyword-research-tool":        "kwfinder",
-  "content-outline-generator":    "kwfinder",
-  "backlink-analyzer":            "linkminer",
-  "internal-link-analyzer":       "linkminer",
-  "content-gap-analyzer":         "serpchecker",
-  "competitor-tracker":           "siteprofiler",
-  "page-speed-checker":           "siteprofiler",
+// Map each CE tool slug to the most relevant Mangools product + theme
+type MangoolsPlacement = {
+  tool: "kwfinder" | "serpchecker" | "siteprofiler" | "serpwatcher" | "linkminer";
+  theme?: "light" | "dark" | "default";
+  version?: "domain";
+};
+
+const MANGOOLS_TOOL_MAP: Record<string, MangoolsPlacement> = {
+  "keyword-research-tool":     { tool: "kwfinder",     version: "domain" },
+  "content-outline-generator": { tool: "kwfinder",     theme: "default"  },
+  "backlink-analyzer":         { tool: "linkminer",    theme: "default"  },
+  "internal-link-analyzer":    { tool: "linkminer",    theme: "default"  },
+  "content-gap-analyzer":      { tool: "serpchecker",  theme: "default"  },
+  "competitor-tracker":        { tool: "siteprofiler", theme: "default"  },
+  "page-speed-checker":        { tool: "siteprofiler", theme: "default"  },
 };
 
 // ─── Utility helpers ──────────────────────────────────────────────────────────
@@ -1402,11 +1408,14 @@ export default function ToolPage() {
           <SiteGroundHalfPage />
 
           {/* Mangools contextual banner */}
-          {MANGOOLS_TOOL_MAP[slug] && (
-            <div className="flex justify-center mt-6">
-              <MangoolsBanner tool={MANGOOLS_TOOL_MAP[slug]} />
-            </div>
-          )}
+          {MANGOOLS_TOOL_MAP[slug] && (() => {
+            const { tool, theme, version } = MANGOOLS_TOOL_MAP[slug];
+            return (
+              <div className="flex justify-center mt-6">
+                <MangoolsBanner tool={tool} theme={theme} version={version} />
+              </div>
+            );
+          })()}
 
           {/* Related tools */}
           <div className="mt-12">

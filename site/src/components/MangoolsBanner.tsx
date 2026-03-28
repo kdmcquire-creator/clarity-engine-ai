@@ -4,36 +4,55 @@
  * Renders a 250×250 Mangools affiliate iframe banner.
  * All banner URLs use fragment-based affiliate tracking: #a69b590a66aee08840d5414cd
  *
+ * Theme options:
+ *   "light"   — white background, subtle styling
+ *   "dark"    — dark background
+ *   "default" — Mangools branded orange/gradient style
+ *
+ * Version options (KWFinder only):
+ *   "domain"  — shows domain-level keyword data instead of standard lookup
+ *
  * Usage:
  *   <MangoolsBanner tool="kwfinder" />
- *   <MangoolsBanner tool="serpchecker" />
+ *   <MangoolsBanner tool="kwfinder" version="domain" />
+ *   <MangoolsBanner tool="serpchecker" theme="default" />
  *   <MangoolsBanner tool="siteprofiler" />
- *   <MangoolsBanner tool="serpwatcher" />
+ *   <MangoolsBanner tool="serpwatcher" theme="default" />
  *   <MangoolsBanner tool="linkminer" />
  */
 
 const AFFILIATE_ID = "a69b590a66aee08840d5414cd";
 
 const TOOL_CONFIG: Record<string, { label: string; slug: string }> = {
-  kwfinder: { label: "KWFinder", slug: "kwfinder" },
+  kwfinder:    { label: "KWFinder",    slug: "kwfinder"    },
   serpchecker: { label: "SERPChecker", slug: "serpchecker" },
-  siteprofiler: { label: "SiteProfiler", slug: "siteprofiler" },
+  siteprofiler:{ label: "SiteProfiler",slug: "siteprofiler"},
   serpwatcher: { label: "SERPWatcher", slug: "serpwatcher" },
-  linkminer: { label: "LinkMiner", slug: "linkminer" },
+  linkminer:   { label: "LinkMiner",   slug: "linkminer"   },
 };
 
 type MangoolsTool = keyof typeof TOOL_CONFIG;
+type MangoolsTheme = "light" | "dark" | "default";
 
 interface MangoolsBannerProps {
   tool: MangoolsTool;
-  theme?: "light" | "dark";
+  theme?: MangoolsTheme;
+  /** KWFinder only — shows domain keyword analysis view */
+  version?: "domain";
 }
 
-export function MangoolsBanner({ tool, theme = "light" }: MangoolsBannerProps) {
+export function MangoolsBanner({
+  tool,
+  theme = "light",
+  version,
+}: MangoolsBannerProps) {
   const config = TOOL_CONFIG[tool];
   if (!config) return null;
 
-  const src = `https://mangools.com/affil-banners/${config.slug}-ad.html?title=default&theme=${theme}&size=250x250#${AFFILIATE_ID}`;
+  const params = new URLSearchParams({ title: "default", theme, size: "250x250" });
+  if (version) params.set("version", version);
+
+  const src = `https://mangools.com/affil-banners/${config.slug}-ad.html?${params.toString()}#${AFFILIATE_ID}`;
 
   return (
     <div
