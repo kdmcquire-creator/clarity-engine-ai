@@ -43,7 +43,7 @@
 | **Resso.ai** | Awin (`awinmid=85741`) | `awinaffid=2805304` | — | — | PH |
 | **Cloudways** | Direct | `id=2102009` | $30+7% recurring or up to $125/sale | 90 days | FH |
 | **Bluehost** | Impact.com | `sjv.io/NG93NP` | $65/sale | 90 days | PH, FH |
-| **NordVPN** | Impact.com | ⏳ Link needed — approved, not wired | ~40% new subscriptions | 30 days | PH (primary), FH, CE, LT |
+| **NordVPN** | Impact.com (`offer_id=15`, `aff_id=142338`) | `go.nordvpn.net/aff_c?offer_id=15&aff_id=142338` | 40% CPS | 30 days | PH, FH, CE, LT |
 
 ---
 
@@ -104,6 +104,7 @@ These slugs are in `/go/` routes for click tracking, but the destinations have n
 | `viralcanvas` | awin1.com → viralcanvas.ai/ | ✅ Awin 124372 |
 | `resso` | awin1.com → resso.ai/signup | ✅ Awin 85741 |
 | `siteground` | siteground.com/?afcode=758135... | ✅ |
+| `nordvpn` | go.nordvpn.net/aff_c?offer_id=15&aff_id=142338 | ✅ |
 | *tool slugs* | tool.affiliateUrl → tool.websiteUrl | Varies per tool |
 
 ### Clarity Engine (`clarity-engine.ai/go/[slug]`)
@@ -116,6 +117,7 @@ These slugs are in `/go/` routes for click tracking, but the destinations have n
 | `mangools` | mangools.com/?ref=clarityengine | ⚠️ Not a real affiliate link |
 | `amazon` | amazon.com/?tag=clarityengine-20 | ✅ |
 | `siteground` | siteground.com/?afcode=758135... | ✅ |
+| `nordvpn` | go.nordvpn.net/aff_c?offer_id=15&aff_id=142338 | ✅ |
 | *tool slugs* | tool.affiliateUrl (Semrush/Surfer/Ahrefs) | ⚠️ Same placeholder links |
 
 ### AI Finance Hub (`aifinancehub.ai/go/[slug]`)
@@ -126,6 +128,7 @@ These slugs are in `/go/` routes for click tracking, but the destinations have n
 | `bluehost` | bluehost.sjv.io/c/7045929/1376228/11352 | ✅ |
 | `amazon` | amazon.com/?tag=aifinancehub08-20 | ✅ |
 | `siteground` | siteground.com/?afcode=758135... | ✅ |
+| `nordvpn` | go.nordvpn.net/aff_c?offer_id=15&aff_id=142338 | ✅ |
 | *tool slugs* | tool.affiliateUrl → tool.websiteUrl | Varies per tool |
 
 ### LegalTech AI Hub (`legaltech-ai-hub.com/go/[slug]`)
@@ -140,6 +143,7 @@ These slugs are in `/go/` routes for click tracking, but the destinations have n
 | `spellbook` | spellbook.legal | ❌ Check for program |
 | `amazon` | amazon.com/?tag=legaltechhub-20 | ✅ |
 | `siteground` | siteground.com/?afcode=758135... | ✅ |
+| `nordvpn` | go.nordvpn.net/aff_c?offer_id=15&aff_id=142338 | ✅ |
 
 ---
 
@@ -182,7 +186,7 @@ Click-through goes to `/go/amazon` → site-specific tracking tag.
 
 ### 🟠 High Value — Apply Now
 
-- [ ] **NordVPN — wire tracking link** — Approved on Impact. Send Impact tracking link → add `/go/nordvpn` slug to PH, FH, CE, LT routes. Primary placement: PH tool pages + FH blog sidebar.
+- [x] **NordVPN** — ✅ Wired 2026-03-28. `aff_id=142338`, `offer_id=15`. `/go/nordvpn` live on PH, FH, CE, LT.
 - [ ] **Apply to Semrush BeRush** — $200/sale. Check if CE traffic qualifies at semrush.com/lp/affiliate-program/en/
 - [ ] **Apply to Surfer SEO affiliate** — 25% recurring. surferseo.com/affiliate-program/
 - [x] **Mangools** — ✅ Approved. ID `a69b590a66aee08840d5414cd` wired. Banners: KWFinder, SERPChecker, SiteProfiler (250×250 iframes).
