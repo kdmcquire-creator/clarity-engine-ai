@@ -7,7 +7,19 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AffiliateBlock from "@/components/AffiliateBlock";
 import SiteGroundHalfPage from "@/components/SiteGroundHalfPage";
+import MangoolsBanner from "@/components/MangoolsBanner";
 import { tools, getToolBySlug } from "@/lib/tools";
+
+// Map each CE tool slug to the most relevant Mangools product
+const MANGOOLS_TOOL_MAP: Record<string, "kwfinder" | "serpchecker" | "siteprofiler" | "serpwatcher" | "linkminer"> = {
+  "keyword-research-tool":        "kwfinder",
+  "content-outline-generator":    "kwfinder",
+  "backlink-analyzer":            "linkminer",
+  "internal-link-analyzer":       "linkminer",
+  "content-gap-analyzer":         "serpchecker",
+  "competitor-tracker":           "siteprofiler",
+  "page-speed-checker":           "siteprofiler",
+};
 
 // ─── Utility helpers ──────────────────────────────────────────────────────────
 
@@ -1388,6 +1400,13 @@ export default function ToolPage() {
 
           {/* Half-page banner */}
           <SiteGroundHalfPage />
+
+          {/* Mangools contextual banner */}
+          {MANGOOLS_TOOL_MAP[slug] && (
+            <div className="flex justify-center mt-6">
+              <MangoolsBanner tool={MANGOOLS_TOOL_MAP[slug]} />
+            </div>
+          )}
 
           {/* Related tools */}
           <div className="mt-12">

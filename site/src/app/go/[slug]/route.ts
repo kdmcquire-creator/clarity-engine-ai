@@ -8,7 +8,8 @@ const staticLinks: Record<string, string> = {
   ahrefs: "https://ahrefs.com/?ref=clarityengine",
   surfer: "https://surferseo.com/?via=clarityengine",
   moz: "https://moz.com/?ref=clarityengine",
-  mangools: "https://mangools.com/?ref=clarityengine",
+  mangools: "https://mangools.com#a69b590a66aee08840d5414cd",
+  "mangools-kwfinder": "https://mangools.com/kwfinder#a69b590a66aee08840d5414cd",
   amazon: "https://www.amazon.com/?tag=clarityengine-20",
   siteground: "https://www.siteground.com/index.htm?afcode=758135cea38bbc354897accd3183d9ff",
 };
