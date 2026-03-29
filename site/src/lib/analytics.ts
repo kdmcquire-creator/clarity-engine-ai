@@ -1,5 +1,4 @@
-// Click tracking — structured logs captured by Cloudflare Workers
-// Upgrade path: swap console.log for KV or D1 writes when volume justifies it
+import { getCloudflareContext } from "@opennextjs/cloudflare";
 
 export interface ClickEvent {
   slug: string;
@@ -10,13 +9,25 @@ export interface ClickEvent {
   ip: string | null;
 }
 
+interface WorkerEnv {
+  AFFILIATE_CLICKS: KVNamespace;
+}
+
 export function logAffiliateClick(event: ClickEvent): void {
-  console.log(
-    JSON.stringify({
-      type: "affiliate_click",
-      ...event,
-    })
-  );
+  console.log(JSON.stringify({ type: "affiliate_click", site: "ce", ...event }));
+}
+
+export async function persistAffiliateClick(event: ClickEvent): Promise<void> {
+  try {
+    const { env } = getCloudflareContext<WorkerEnv>();
+    const date = event.timestamp.slice(0, 10);
+    const key = `ce:${date}:${event.slug}:${Date.now()}`;
+    await env.AFFILIATE_CLICKS.put(key, JSON.stringify(event), {
+      expirationTtl: 7776000, // 90 days
+    });
+  } catch {
+    // KV unavailable in local dev — already logged via console
+  }
 }
 
 // Client-side GA4 / GTM helper

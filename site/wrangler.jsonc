@@ -19,5 +19,11 @@
     { "pattern": "clarity-engine.ai/*", "zone_name": "clarity-engine.ai" },
     { "pattern": "www.clarity-engine.ai/*", "zone_name": "clarity-engine.ai" }
   ],
-  "observability": { "enabled": true }
+  "observability": { "enabled": true },
+  "kv_namespaces": [
+    {
+      "binding": "AFFILIATE_CLICKS",
+      "id": "ddeef7db067b4dff9660b731662a40c6"
+    }
+  ]
 }
