@@ -96,6 +96,18 @@ export default function Footer() {
             </ul>
           </div>
         </div>
+        {/* Network links */}
+        <div className="border-t border-white/10 pt-6 mb-6">
+          <p className="text-xs text-white/30 text-center uppercase tracking-wider mb-3 font-medium">
+            More AI Resources
+          </p>
+          <div className="flex flex-wrap justify-center gap-5">
+            <a href="https://aiproductivityhub.co" target="_blank" rel="noopener" className="text-sm text-white/40 hover:text-cyan-400 transition">AI Productivity Hub</a>
+            <a href="https://aifinancehub.ai" target="_blank" rel="noopener" className="text-sm text-white/40 hover:text-cyan-400 transition">AI Finance Hub</a>
+            <a href="https://legaltech-ai-hub.com" target="_blank" rel="noopener" className="text-sm text-white/40 hover:text-cyan-400 transition">Legal AI Hub</a>
+          </div>
+        </div>
+
         <div className="border-t border-white/10 pt-6 text-center text-white/40 text-sm">
           <p className="text-xs text-white/25 mb-3">
             <a
