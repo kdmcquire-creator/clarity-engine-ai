@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import SiteGroundBanner from "@/components/SiteGroundBanner";
 import SiteGroundLeaderboard from "@/components/SiteGroundLeaderboard";
 import { NordVPNLeaderboard } from "@/components/NordVPNLeaderboard";
+import SidebarAmazon from "@/components/SidebarAmazon";
 import { posts, getPostBySlug, postContent } from "@/lib/blog";
 import type { Metadata } from "next";
 
@@ -137,7 +138,9 @@ export default async function BlogPostPage({ params }: Props) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       <Header />
       <main className="py-12 px-4">
-        <div className="container mx-auto max-w-3xl">
+        <div className="container mx-auto max-w-6xl">
+        <div className="lg:grid lg:grid-cols-3 lg:gap-10">
+        <div className="lg:col-span-2">
           {/* Breadcrumb */}
           <div className="flex items-center gap-2 text-sm text-white/40 mb-6">
             <Link href="/blog/" className="hover:text-white transition">
@@ -241,7 +244,17 @@ export default async function BlogPostPage({ params }: Props) {
               </div>
             </div>
           )}
-        </div>
+        </div>{/* lg:col-span-2 */}
+
+          {/* Sidebar — sticky */}
+          <aside className="mt-12 lg:mt-0">
+            <div className="sticky top-6 space-y-6">
+              <SidebarAmazon />
+            </div>
+          </aside>
+
+        </div>{/* lg:grid */}
+        </div>{/* max-w-6xl */}
       </main>
       <Footer />
     </>
