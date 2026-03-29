@@ -8,7 +8,6 @@ export default function SiteGroundBanner() {
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          border={0}
           alt="Ad - Web Hosting from SiteGround - Crafted for easy site management. Click to learn more."
           src="https://siteground.com/static/affiliate/en/USD/general_EN_USD_general-hosting-square-light.jpg"
           width={250}

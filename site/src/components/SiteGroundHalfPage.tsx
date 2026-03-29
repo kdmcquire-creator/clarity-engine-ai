@@ -8,7 +8,6 @@ export default function SiteGroundHalfPage() {
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          border={0}
           alt="Ad - SiteGround Web Hosting - Crafted for easy site management. Amazing Speed; Powerful Tools; Top-rated support. Learn more."
           src="https://siteground.com/static/affiliate/en/USD/general_EN_USD_general-hosting-half-page-light.jpg"
           width={300}
