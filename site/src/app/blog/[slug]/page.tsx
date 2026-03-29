@@ -109,8 +109,32 @@ export default async function BlogPostPage({ params }: Props) {
   const content = postContent[post.slug] || "";
   const otherPosts = posts.filter((p) => p.slug !== post.slug).slice(0, 3);
 
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: post.title,
+    description: post.excerpt,
+    datePublished: post.publishedAt,
+    dateModified: post.publishedAt,
+    author: { "@type": "Organization", name: "Clarity Engine AI", url: "https://clarity-engine.ai" },
+    publisher: { "@type": "Organization", name: "Clarity Engine AI", url: "https://clarity-engine.ai" },
+    mainEntityOfPage: { "@type": "WebPage", "@id": `https://clarity-engine.ai/blog/${post.slug}/` },
+  };
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://clarity-engine.ai" },
+      { "@type": "ListItem", position: 2, name: "Blog", item: "https://clarity-engine.ai/blog/" },
+      { "@type": "ListItem", position: 3, name: post.title, item: `https://clarity-engine.ai/blog/${post.slug}/` },
+    ],
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       <Header />
       <main className="py-12 px-4">
         <div className="container mx-auto max-w-3xl">

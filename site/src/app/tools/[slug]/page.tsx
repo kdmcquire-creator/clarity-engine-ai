@@ -1345,8 +1345,29 @@ export default function ToolPage() {
     );
   }
 
+  const toolJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: tool.name,
+    description: tool.description,
+    applicationCategory: tool.category,
+    url: `https://clarity-engine.ai/tools/${tool.slug}/`,
+  };
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://clarity-engine.ai" },
+      { "@type": "ListItem", position: 2, name: "Tools", item: "https://clarity-engine.ai/tools/" },
+      { "@type": "ListItem", position: 3, name: tool.name, item: `https://clarity-engine.ai/tools/${tool.slug}/` },
+    ],
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(toolJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       <Header />
       <main className="py-12 px-4">
         <div className="container mx-auto max-w-4xl">
