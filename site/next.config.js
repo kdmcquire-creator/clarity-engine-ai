@@ -2,6 +2,20 @@
 const nextConfig = {
   reactStrictMode: true,
   trailingSlash: true,
+  async redirects() {
+    return [
+      {
+        source: "/article/competitor-analysis-for-seo-how-to-spy-on-your-competition",
+        destination: "/blog/competitor-content-analysis",
+        permanent: true,
+      },
+      {
+        source: "/article/:slug",
+        destination: "/blog/:slug",
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {

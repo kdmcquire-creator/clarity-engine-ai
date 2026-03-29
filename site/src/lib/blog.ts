@@ -691,14 +691,14 @@ If you're using AI content, the key protective measures are: establish clear aut
   },
   {
     slug: "competitor-content-analysis",
-    title: "How to Steal Your Competitors' Best Content Ideas (Legally)",
+    title: "How to Analyze Competitors' SEO: Spy on Your Competition (Legally)",
     excerpt:
-      "Your competitors have already done the hard work of discovering what content works in your niche. Here's how to ethically analyze their strategy and build something better.",
+      "A step-by-step SEO competitor analysis guide: find what content your rivals rank for, identify gaps in their strategy, and build something better. Free tools included.",
     category: "SEO Strategy",
     publishedAt: "2025-02-01",
     readingTime: 8,
     author: "CE Editorial Team",
-    tags: ["competitor analysis", "content strategy", "seo research", "content ideas"],
+    tags: ["competitor analysis", "seo competitor analysis", "analyze competitors seo", "seo competition analyzer", "content strategy"],
     content: `## Why Competitor Analysis Is the Best Content Research
 
 The best content strategy isn't guessing what your audience wants — it's knowing what content is already proven to generate traffic in your niche, and building something better. Your competitors have spent months or years publishing content, getting feedback from search algorithms, and iterating. That's a research corpus you can analyze for free.
