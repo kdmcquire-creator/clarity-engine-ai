@@ -9,6 +9,11 @@ export interface ClickEvent {
   ip: string | null;
 }
 
+// Minimal KV type — subset of @cloudflare/workers-types KVNamespace
+interface KVNamespace {
+  put(key: string, value: string, options?: { expirationTtl?: number }): Promise<void>;
+}
+
 interface WorkerEnv {
   AFFILIATE_CLICKS: KVNamespace;
 }
@@ -19,7 +24,7 @@ export function logAffiliateClick(event: ClickEvent): void {
 
 export async function persistAffiliateClick(event: ClickEvent): Promise<void> {
   try {
-    const { env } = getCloudflareContext<WorkerEnv>();
+    const env = getCloudflareContext().env as unknown as WorkerEnv;
     const date = event.timestamp.slice(0, 10);
     const key = `ce:${date}:${event.slug}:${Date.now()}`;
     await env.AFFILIATE_CLICKS.put(key, JSON.stringify(event), {
