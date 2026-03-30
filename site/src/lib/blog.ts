@@ -12,6 +12,304 @@ export type BlogPost = {
 
 export const posts: BlogPost[] = [
   {
+    slug: "chatgpt-for-seo-complete-guide",
+    title: "ChatGPT for SEO: A Complete Guide to AI-Assisted Search Optimization",
+    excerpt:
+      "ChatGPT can't check your rankings — but it can dramatically accelerate keyword research, content briefs, meta tags, and schema markup. Here's how to use it properly.",
+    category: "AI Tools",
+    publishedAt: "2026-03-28",
+    readingTime: 9,
+    author: "CE Editorial Team",
+    tags: ["chatgpt", "seo", "ai-tools", "content"],
+    content: `## What ChatGPT Can (and Can't) Do for SEO
+
+Let's get the limitations out of the way first. ChatGPT has no access to live search data. It can't tell you your current rankings, pull real search volumes, or show you what your competitors are actually ranking for. For that, you still need tools like Ahrefs, Semrush, or Google Search Console.
+
+What it *can* do is dramatically accelerate the time-consuming cognitive work around SEO: brainstorming keyword angles, writing content briefs, drafting meta descriptions, generating schema markup, and identifying content gaps — tasks that used to take hours and now take minutes.
+
+## Keyword Research: Expanding Your Seed List
+
+ChatGPT is excellent at generating keyword variations you wouldn't have thought of. Start with your seed keyword and ask it to produce:
+
+- Long-tail variations ("best X for Y with Z constraint")
+- Question-based keywords that mirror search intent
+- Semantic variations (related concepts, synonyms, subtopics)
+- Competitor positioning angles ("X vs Y", "X alternative")
+
+**Prompt template:** *"I'm writing content about [topic]. Generate 20 long-tail keyword variations a beginner would search for, including question formats and comparison queries."*
+
+Then take those to a real keyword tool to validate volume and difficulty. ChatGPT generates the ideas; the data tools filter them.
+
+## Content Brief Generation
+
+This is where ChatGPT saves the most time. A good content brief includes the target keyword, secondary keywords, search intent analysis, recommended headings, and key points to cover. Writing that manually takes 30–60 minutes per post.
+
+With ChatGPT, you can produce a solid draft brief in under 5 minutes:
+
+**Prompt:** *"Create a detailed content brief for a 1,500-word article targeting the keyword '[keyword]'. Include: search intent, recommended H2 headings, key points to cover under each heading, and 5 secondary keywords to weave in naturally."*
+
+Review the output critically — ChatGPT will sometimes miss nuance in search intent or suggest headings that don't match what's actually ranking. Always cross-reference with the actual top 10 results for your keyword.
+
+## Meta Tags and Title Tags at Scale
+
+Meta descriptions and title tags are formulaic enough that ChatGPT handles them well. Give it the article title, target keyword, and a 150-character limit, and it will produce several options to choose from.
+
+More useful: batch processing. If you have 20 posts without meta descriptions, paste the titles and target keywords into one prompt and ask for all 20 at once. Review and edit — don't publish raw outputs without checking — but the drafts are usually 80% there.
+
+## Schema Markup Generation
+
+ChatGPT can generate valid JSON-LD schema markup for FAQ, Article, HowTo, Product, and Review schemas. This used to require either a developer or a dedicated schema tool. Now:
+
+**Prompt:** *"Generate valid JSON-LD FAQ schema for the following Q&A pairs: [paste your FAQ content]."*
+
+Always validate the output with Google's Rich Results Test before deploying. ChatGPT occasionally makes small structural errors, but they're easy to spot in the validator.
+
+## Internal Linking Suggestions
+
+Feed ChatGPT a list of your existing post titles and URLs, then ask it which posts should link to each other based on topical relevance. It won't be perfect, but it surfaces connections you might have missed — especially in large content libraries.
+
+## What to Avoid
+
+- **Don't publish ChatGPT-written content without significant editing.** The writing is generic and lacks the first-hand experience Google increasingly rewards.
+- **Don't use it to check rankings or get traffic data.** It will hallucinate numbers.
+- **Don't trust its keyword volume estimates.** They're invented.
+- **Don't skip human review of briefs.** It sometimes misreads search intent.
+
+ChatGPT is an SEO accelerator, not an SEO replacement. The judgment, the data interpretation, and the genuine expertise still have to come from you.`,
+  },
+  {
+    slug: "best-seo-tools-2026",
+    title: "Best SEO Tools in 2026: Ahrefs vs Semrush vs Moz (Honest Comparison)",
+    excerpt:
+      "Ahrefs, Semrush, and Moz dominate the SEO tool market — but they're not interchangeable. Here's an honest breakdown of where each one wins, and which is right for your use case.",
+    category: "SEO Tools",
+    publishedAt: "2026-03-26",
+    readingTime: 10,
+    author: "CE Editorial Team",
+    tags: ["seo-tools", "ahrefs", "semrush", "moz", "comparison"],
+    content: `## The SEO Tool Landscape in 2026
+
+The big three — Ahrefs, Semrush, and Moz — have been competing for a decade. Each has iterated significantly, added AI features, and repositioned its pricing. None of them is the clear winner for every use case. The right choice depends on what you're actually trying to do.
+
+This comparison is based on direct use across all three platforms over the past year, not affiliate relationships or vendor-provided data.
+
+## Ahrefs: Best for Backlink Analysis and Competitor Research
+
+Ahrefs built its reputation on the most comprehensive backlink index available, and that advantage holds in 2026. If you spend a lot of time analyzing competitor link profiles, prospecting for link building opportunities, or auditing your own backlink health, Ahrefs is the strongest tool.
+
+**What it does best:**
+- Backlink analysis (deepest index, fastest crawl updates)
+- Keyword research with accurate click data (not just volume)
+- Content gap analysis comparing your site to competitors
+- Site Explorer for deep competitor intelligence
+
+**Where it falls short:**
+- The built-in content editor is basic compared to Semrush's
+- Technical SEO audit, while solid, isn't as feature-rich as Screaming Frog
+- Pricing is premium — Starter plan ($29/mo) is limited; Lite ($99/mo) is the practical entry point
+
+**Best for:** Link builders, content marketers doing competitor research, agencies managing multiple client sites.
+
+## Semrush: Best All-in-One Platform
+
+Semrush has evolved into the most comprehensive SEO platform available. Its keyword database is massive, its content marketing toolkit is genuinely useful, and its technical audit tool is one of the best available without a separate crawler.
+
+**What it does best:**
+- Keyword research with the largest database (~25 billion keywords)
+- Content marketing (Topic Research, SEO Writing Assistant, Content Audit)
+- PPC research and ad intelligence
+- Local SEO features
+- Social media management integration
+
+**Where it falls short:**
+- Backlink data has historically lagged Ahrefs (gap has narrowed significantly in 2025-26)
+- Interface is complex — there's a learning curve
+- Gets expensive fast when adding users or advanced features
+
+**Best for:** Agencies, in-house teams doing both SEO and content marketing, businesses running paid search alongside organic.
+
+## Moz Pro: Best for Beginners and Local SEO
+
+Moz has lost some market share to Ahrefs and Semrush over the past five years, but it's retained a strong position in two areas: approachability for beginners and local SEO with Moz Local.
+
+**What it does best:**
+- Beginner-friendly interface and educational resources
+- Domain Authority metric (still widely used as a quick proxy metric)
+- Moz Local for managing local listings and citations
+- Keyword Explorer with clear difficulty scoring
+
+**Where it falls short:**
+- Backlink index is smaller than Ahrefs and Semrush
+- Keyword database is smaller
+- Site crawl is less comprehensive than competitors
+- Feature development has been slower
+
+**Best for:** Small businesses, local businesses, SEO beginners, teams that primarily need keyword research without deep competitor analysis.
+
+## Pricing Comparison (2026)
+
+| Tool | Entry Plan | Mid-Tier | Notes |
+|------|-----------|----------|-------|
+| Ahrefs | $29/mo (Starter) | $99/mo (Lite) | Starter is limited; Lite is practical minimum |
+| Semrush | $139.95/mo (Pro) | $249.95/mo (Guru) | Free trial available |
+| Moz Pro | $49/mo (Starter) | $99/mo (Standard) | Most affordable full access |
+
+## The Right Choice for Your Situation
+
+**You're a solo blogger or small site owner:** Moz Pro or Ahrefs Lite. Moz if you want simplicity, Ahrefs if you're doing any link building.
+
+**You're an in-house SEO at a mid-size company:** Semrush. The all-in-one platform reduces tool sprawl.
+
+**You're an agency managing 10+ clients:** Ahrefs + Screaming Frog combination, or Semrush's Agency plan.
+
+**You're primarily doing local SEO:** Moz Local + either Ahrefs or Semrush for organic research.
+
+**Budget is tight:** Start with free tools (Google Search Console, Google Analytics, Ubersuggest) until you have enough traffic to justify a paid subscription.
+
+## Final Verdict
+
+There's no single winner. Ahrefs wins on backlinks. Semrush wins on breadth. Moz wins on accessibility. Most serious SEOs end up with one primary tool and occasionally pull data from competitors' free tiers. Start with the one that matches your primary use case, and don't switch unless you have a specific gap it can't fill.`,
+  },
+  {
+    slug: "topical-authority-seo-guide",
+    title: "Topical Authority: The SEO Strategy That's Replacing Keyword Targeting",
+    excerpt:
+      "Google no longer rewards chasing individual keywords. Topical authority — building deep, comprehensive coverage of a subject — is now the strategy that drives sustained organic growth.",
+    category: "SEO Strategy",
+    publishedAt: "2026-03-24",
+    readingTime: 8,
+    author: "CE Editorial Team",
+    tags: ["topical-authority", "seo-strategy", "content-strategy", "google"],
+    content: `## Why Keyword Targeting Alone No Longer Works
+
+For years, the standard SEO playbook was straightforward: find a keyword with decent volume and manageable difficulty, write a post targeting that keyword, build some links, rank. Repeat at scale.
+
+That playbook still partially works — but it's increasingly insufficient. Google's ranking algorithms have shifted to evaluate *topical coverage* as a proxy for expertise. A site with one excellent post on project management will lose to a site with 40 comprehensive, interconnected posts covering every facet of project management — even if that one post is technically better.
+
+This shift has a name: topical authority. And understanding it changes how you should structure your entire content strategy.
+
+## What Topical Authority Actually Means
+
+Topical authority is Google's assessment of how comprehensively and authoritatively a website covers a given subject area. It's not measured by any single metric — it's inferred from the breadth and depth of your content, the internal linking structure, the quality and consistency of your writing, and the external signals (links, mentions, engagement) that indicate your content is trusted.
+
+The practical implication: Google now evaluates your site's expertise at the topic level, not just the page level. A page on "best project management software" ranks better if it lives on a site that also has strong content covering Agile methodology, team communication, project planning templates, and project manager career paths — than if it lives on a general productivity blog with one random post on the topic.
+
+## How to Build Topical Authority: The Pillar-Cluster Model
+
+The most effective structural approach is the pillar-cluster model:
+
+**Pillar content:** A comprehensive, authoritative guide covering a broad topic. This is your 3,000-5,000 word definitive resource — the article you want to rank for high-volume, competitive head terms.
+
+**Cluster content:** A series of in-depth posts covering specific subtopics within your pillar. These target longer-tail, lower-competition keywords and link back to the pillar.
+
+**Example structure for "project management" as a pillar topic:**
+- Pillar: "The Complete Guide to Project Management"
+- Clusters: Agile vs Waterfall, project charter templates, risk management, stakeholder communication, project management certifications, best PM software, how to become a project manager, common PM mistakes, etc.
+
+The cluster posts support the pillar through internal links, signal comprehensive coverage to Google, and often rank independently for their own long-tail keywords.
+
+## Building Your Topic Map
+
+Before writing anything, map your topic comprehensively:
+
+1. **Identify your core topic** — the subject you want to own. Be specific. "Business software" is too broad. "Project management for remote teams" is workable.
+
+2. **Brainstorm every subtopic** — What questions does someone learning this topic need answered? What comparisons would they make? What tools would they evaluate? What mistakes would they make? Use ChatGPT, Answer the Public, or Semrush's Keyword Magic Tool.
+
+3. **Audit your existing content** — What subtopics do you already cover? Where are the gaps?
+
+4. **Prioritize by business value** — Not all subtopics are equally valuable. Start with the ones that align with your conversion goals.
+
+5. **Create a publishing roadmap** — Topical authority is built over months, not weeks. Map out 20-40 posts across your topic cluster and publish systematically.
+
+## Internal Linking: The Glue That Makes It Work
+
+Building cluster content without proper internal linking misses half the benefit. Every cluster post should link to the pillar. The pillar should link to each cluster post. Related clusters should cross-link when it's genuinely useful to readers.
+
+This creates a web of relevance signals that Google can crawl, understand, and evaluate as a coherent body of work — rather than a collection of isolated posts.
+
+## How Long Does It Take?
+
+Topical authority isn't built overnight. Realistically:
+
+- **First signals:** 3-6 months after you start publishing clusters consistently
+- **Meaningful ranking improvements:** 6-12 months for competitive topics
+- **Established authority:** 12-24 months for high-competition niches
+
+This is a long-term strategy, not a quick win. The upside is that once you've built it, it's extremely difficult for competitors to displace — because replicating a library of 50 high-quality, interconnected posts is a much larger task than beating a single page.
+
+## The Shortcut That Doesn't Work
+
+Some SEOs try to fake topical authority with AI-generated content at volume — publishing hundreds of thin posts quickly to signal "coverage." Google's Helpful Content system specifically targets this pattern. The approach backfires: you get a sitewide quality penalty that suppresses your entire domain, including your best content.
+
+There is no shortcut. Build real coverage, with real depth, on a realistic timeline.`,
+  },
+  {
+    slug: "ai-content-writing-seo-strategy",
+    title: "AI Content Writing for SEO: What Works, What Doesn't, and How to Do It Right",
+    excerpt:
+      "AI can write content fast — but fast content that ranks requires a specific workflow. Here's the honest guide to using AI writing tools for SEO without triggering quality penalties.",
+    category: "Content Strategy",
+    publishedAt: "2026-03-22",
+    readingTime: 7,
+    author: "CE Editorial Team",
+    tags: ["ai-content", "content-writing", "seo", "content-strategy"],
+    content: `## The Reality of AI Content and SEO in 2026
+
+Let's be direct: publishing raw AI-generated content at scale is an SEO liability, not an asset. Google's Helpful Content system is specifically designed to identify and suppress low-quality scaled content, and it's gotten significantly better at doing so. Sites that went all-in on AI content generation in 2023-2024 largely got hit by HCU updates. Many haven't recovered.
+
+That said, AI writing tools are now an essential part of a professional content workflow — when used correctly. The distinction is between AI as a generator (bad) and AI as an accelerator (good).
+
+## The Right Framework: AI as a Content Accelerator
+
+The workflow that works looks like this:
+
+**1. Research first, always.** Before opening any AI tool, understand the topic. Read the top 10 results for your target keyword. Note what they cover, what they miss, and where you have genuine expertise to add.
+
+**2. Use AI for structure and drafts.** Ask ChatGPT, Claude, or your preferred tool to generate an outline based on your research. Then ask it to draft sections — treating the output as a rough first draft, not a finished product.
+
+**3. Add what AI can't provide.** This is the critical step: inject first-hand experience, original data, specific examples, and genuine opinions. This is the content that differentiates you from every other site that ran the same AI prompt.
+
+**4. Edit for voice, accuracy, and depth.** AI drafts are usually accurate but generic. Tighten the writing, add specific numbers and dates, remove hedging language, and make it sound like a human expert wrote it.
+
+**5. SEO-optimize after drafting.** Add your target and secondary keywords naturally, optimize your title and meta description, add internal links, and structure your headers for featured snippet eligibility.
+
+## Best AI Tools for SEO Content in 2026
+
+**ChatGPT (GPT-5):** Best for research acceleration, outline generation, and editing assistance. The o-series models are particularly good for complex analysis. Weakness: generic writing voice that requires significant editing.
+
+**Claude (Anthropic):** Stronger than GPT at following complex instructions and maintaining a consistent tone throughout long documents. Good for turning rough notes into polished drafts.
+
+**Surfer AI + Semrush Content Assistant:** These combine AI writing with real-time SEO data — they pull keyword density targets, NLP terms, and competitor analysis into the writing interface. More expensive, but reduces the manual optimization step.
+
+**Jasper:** Designed specifically for marketing content. Good templates and brand voice training. Less useful for technical or complex topics.
+
+## Common Mistakes That Hurt Rankings
+
+**Publishing without human review.** AI makes factual errors. It confidently states incorrect statistics, misattributes quotes, and sometimes invents case studies. Every piece of AI-assisted content needs a human fact-check before publishing.
+
+**Ignoring E-E-A-T signals.** Expertise, Experience, Authoritativeness, Trustworthiness. AI can demonstrate expertise and authoritativeness to a degree, but it cannot demonstrate first-hand *experience*. That has to come from you. Add real examples from your own work, your own tests, your own failures.
+
+**Writing for keywords, not readers.** AI tools optimize for the brief you give them. If your brief is keyword-stuffed or focused on hitting word counts, the output will be too. Brief AI tools the same way you'd brief a skilled human writer.
+
+**Over-relying on AI for YMYL topics.** "Your Money or Your Life" content (finance, health, legal, safety) is held to a higher standard. AI-generated content in these categories needs especially careful expert review and citation.
+
+## How to Know If Your AI Content Is Working
+
+Track these metrics at the post level:
+
+- **Organic impressions and clicks** (Google Search Console) — are pages getting indexed and shown?
+- **Average ranking position** — are posts entering the top 20, then climbing?
+- **Engagement metrics** (time on page, scroll depth, return visits) — are people actually reading, or bouncing immediately?
+- **Conversion rate** — is the traffic worth having?
+
+If you're getting impressions but no clicks, your title tags and meta descriptions need work. If you're getting clicks but immediate bounces, your content isn't delivering on what the search result promised. If rankings aren't improving over 3-6 months, the content quality may not meet the threshold for your target keyword's competition level.
+
+## The Bottom Line
+
+AI content writing for SEO is a skill, not a toggle. The sites winning with AI-assisted content are the ones investing the human expertise and editorial judgment to make the AI output genuinely useful — not the ones trying to automate their way to rankings. Use AI to go faster, not to skip the work.`,
+  },
+  {
     slug: "seo-fundamentals-2025",
     title: "SEO Fundamentals in 2025: What Actually Works",
     excerpt:
