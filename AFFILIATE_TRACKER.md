@@ -72,7 +72,7 @@
 
 | Program | Network | Status | Date Applied | Sites |
 |---------|---------|--------|-------------|-------|
-| **Semrush** | Impact.com | Pending | 2026-03-30 | CE |
+| **Semrush** | Impact.com | DECLINED (low reach) | 2026-03-31 | CE |
 | **FreshBooks** | Impact.com | Pending | Pre-2026-03-27 | PH, FH |
 | **monday.com** | PartnerStack | Pending (queued behind network approval) | 2026-03-30 | PH |
 | **Pipedrive** | PartnerStack | Pending (queued behind network approval) | 2026-03-30 | PH |
@@ -94,7 +94,7 @@
 | Program | Sites | Issue | Fix Needed |
 |---------|-------|-------|------------|
 | **FreshBooks** | PH, FH | ⏳ Application pending approval — placeholder ID `1234567` in place. Clicks tracked but earning nothing until approved. | Send real publisher ID once approved → update `go/[slug]/route.ts` on both PH and FH (one-liner swap) |
-| **Semrush** | CE | Link uses `?ref=clarityengine` — not a real affiliate link, earns nothing | ⏳ Applied on Impact.com 2026-03-30 — pending. Also consider BeRush direct ($200/sale). Replace link once approved. |
+| **Semrush** | CE | Link uses `?ref=clarityengine` — not a real affiliate link, earns nothing | Impact DECLINED 2026-03-31 (low reach). Apply to BeRush direct: semrush.com/lp/affiliate-program/en/ — $200/sale, no traffic minimums. Replace link once approved. |
 | **Surfer SEO** | CE | Link uses `?via=clarityengine` — not a real affiliate link | Apply at surferseo.com/affiliate-program/ → replace with real partner link |
 | **Moz** | CE | Link uses `?ref=clarityengine` — not tracked | Check Moz partner program status → update or remove |
 | ~~**Mangools**~~ | ✅ Fixed 2026-03-27 | ID `a69b590a66aee08840d5414cd`. Links use `#id` fragment (not `?ref=`). `/go/mangools` + `/go/mangools-kwfinder` wired on CE. |
