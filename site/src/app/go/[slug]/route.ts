@@ -7,7 +7,7 @@ const staticLinks: Record<string, string> = {
   semrush: "https://www.semrush.com/sem/?ref=clarityengine",
   ahrefs: "https://ahrefs.com/?ref=clarityengine",
   surfer: "https://surferseo.com/?via=clarityengine",
-  moz: "https://moz.com/?ref=clarityengine",
+  moz: "https://moz.pxf.io/WOOLbM",
   mangools: "https://mangools.com#a69b590a66aee08840d5414cd",
   "mangools-kwfinder": "https://mangools.com/kwfinder#a69b590a66aee08840d5414cd",
   amazon: "https://www.amazon.com/?tag=clarityengine-20",
