@@ -12,7 +12,7 @@ const staticLinks: Record<string, string> = {
   "mangools-kwfinder": "https://mangools.com/kwfinder#a69b590a66aee08840d5414cd",
   amazon: "https://www.amazon.com/?tag=clarityengine-20",
   siteground: "https://www.siteground.com/index.htm?afcode=758135cea38bbc354897accd3183d9ff",
-  nordvpn: "https://go.nordvpn.net/aff_c?offer_id=15&aff_id=142338",
+  nordvpn: "http://www.awin1.com/cread.php?awinmid=15132&awinaffid=2805304&clickref=",
   "se-ranking": "https://seranking.com/?ga=5009081&source=link",
 };
 
