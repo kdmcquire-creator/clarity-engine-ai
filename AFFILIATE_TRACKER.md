@@ -65,6 +65,7 @@
 | **NordVPN** | **Awin** (awinmid=15132) | awin1.com/cread.php?awinmid=15132&awinaffid=2805304 | 40% rev share | 30 days | PH, CE, FH, LT |
 | **SE Ranking** | Direct | `ga=5009081` | 30% lifetime recurring | 120 days | CE |
 | **Mangools** | Direct | `ref=a69b590a66aee08840d5414cd` | 30% recurring lifetime | 30 days | CE |
+| **Moz** | Impact.com | `moz.pxf.io/WOOLbM` | — | — | CE |
 
 ---
 
@@ -96,7 +97,7 @@
 | **FreshBooks** | PH, FH | ⏳ Application pending approval — placeholder ID `1234567` in place. Clicks tracked but earning nothing until approved. | Send real publisher ID once approved → update `go/[slug]/route.ts` on both PH and FH (one-liner swap) |
 | **Semrush** | CE | Link uses `?ref=clarityengine` — not a real affiliate link, earns nothing | Impact DECLINED 2026-03-31 (low reach). Apply to BeRush direct: semrush.com/lp/affiliate-program/en/ — $200/sale, no traffic minimums. Replace link once approved. |
 | **Surfer SEO** | CE | Link uses `?via=clarityengine` — not a real affiliate link | Apply at surferseo.com/affiliate-program/ → replace with real partner link |
-| **Moz** | CE | Link uses `?ref=clarityengine` — not tracked | Check Moz partner program status → update or remove |
+| ~~**Moz**~~ | ✅ Fixed 2026-03-31 | Approved on Impact. Tracking URL: moz.pxf.io/WOOLbM. `/go/moz` wired on CE. | |
 | ~~**Mangools**~~ | ✅ Fixed 2026-03-27 | ID `a69b590a66aee08840d5414cd`. Links use `#id` fragment (not `?ref=`). `/go/mangools` + `/go/mangools-kwfinder` wired on CE. |
 
 ---
