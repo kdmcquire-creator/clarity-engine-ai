@@ -8,9 +8,9 @@ interface AffiliateBlockProps {
 // Default promo — shown on frontend-only tools or when a tool has no specific affiliate
 const DEFAULT_CTA = {
   heading: "Want Real-Time SEO Data?",
-  body: "Semrush gives you live keyword rankings, backlink data, site audits, and competitor analysis — everything our AI tools estimate, but with actual live data.",
-  label: "Try Semrush Free for 14 Days",
-  href: "/go/semrush/",
+  body: "Moz Pro gives you live keyword rankings, Domain Authority scores, site audits, and backlink analysis — everything our AI tools estimate, but with actual live data from the industry standard.",
+  label: "Try Moz Pro Free for 30 Days",
+  href: "/go/moz",
 };
 
 export default function AffiliateBlock({
