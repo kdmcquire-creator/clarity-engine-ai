@@ -14,6 +14,7 @@ const staticLinks: Record<string, string> = {
   siteground: "https://www.siteground.com/index.htm?afcode=758135cea38bbc354897accd3183d9ff",
   nordvpn: "http://www.awin1.com/cread.php?awinmid=15132&awinaffid=2805304&clickref=",
   "se-ranking": "https://seranking.com/?ga=5009081&source=link",
+  railway: "https://railway.com?referralCode=IxgLVt",
 };
 
 function resolveDestination(slug: string): string | undefined {

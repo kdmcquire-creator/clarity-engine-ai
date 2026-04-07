@@ -18,6 +18,7 @@
 | PartnerStack | Moonsmoke Network | Network re-application pending approval |
 | Impact.com | Publisher: Moonsmoke LLC | Semrush pending approval |
 | NordVPN (Awin) | awinmid=15132, awinaffid=2805304 | Switched from Impact 2026-03-30. AM: Andrew Bernato ab@nordvpnmedia.com |
+| Railway | referralCode=IxgLVt | Direct referral program — $5 credit per signup |
 
 ---
 
@@ -66,6 +67,7 @@
 | **SE Ranking** | Direct | `ga=5009081` | 30% lifetime recurring | 120 days | CE |
 | **Mangools** | Direct | `ref=a69b590a66aee08840d5414cd` | 30% recurring lifetime | 30 days | CE |
 | **Moz** | Impact.com | `moz.pxf.io/WOOLbM` | — | — | CE |
+| **Railway** | Direct (referral) | `railway.com?referralCode=IxgLVt` | $5 credit per referral | — | PH, CE |
 
 ---
 
