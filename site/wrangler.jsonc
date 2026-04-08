@@ -25,6 +25,7 @@
   // Cron triggers are handled by the moonsmoke-cron-scheduler worker
   "vars": {
     "SENDGRID_FROM_EMAIL": "noreply@clarity-engine.ai",
+    "SENDGRID_NEWSLETTER_FROM_EMAIL": "newsletter@clarity-engine.ai",
     "CONTACT_TO_EMAIL": "moonsmoke.contact@gmail.com",
     "STALE_DAYS": "90"
   },
