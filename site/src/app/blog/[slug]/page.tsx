@@ -33,6 +33,29 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
+/** Convert markdown-style [text](url) links in a string to inline <a> elements. */
+function parseLinks(text: string): React.ReactNode {
+  const parts = text.split(/(\[[^\]]+\]\([^)]+\))/g);
+  if (parts.length === 1) return text;
+  return parts.map((part, i) => {
+    const match = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+    if (match) {
+      const isInternal = match[2].startsWith("/");
+      return (
+        <a
+          key={i}
+          href={match[2]}
+          {...(isInternal ? {} : { target: "_blank", rel: "noopener noreferrer" })}
+          className="text-cyan-400 hover:underline font-medium"
+        >
+          {match[1]}
+        </a>
+      );
+    }
+    return part;
+  });
+}
+
 function renderContent(md: string) {
   const lines = md.trim().split("\n");
   const elements: React.ReactNode[] = [];
@@ -74,7 +97,7 @@ function renderContent(md: string) {
       elements.push(
         <ul key={`ul-${i}`} className="list-disc list-inside space-y-1 mb-4 text-white/70">
           {items.map((item, j) => (
-            <li key={j}>{item}</li>
+            <li key={j}>{parseLinks(item)}</li>
           ))}
         </ul>
       );
@@ -82,13 +105,13 @@ function renderContent(md: string) {
     } else if (line.trim() === "") {
       // skip blank lines
     } else {
-      // Inline bold rendering
+      // Inline bold + link rendering
       const parts = line.split(/(\*\*[^*]+\*\*)/g);
       const rendered = parts.map((part, j) => {
         if (part.startsWith("**") && part.endsWith("**")) {
-          return <strong key={j} className="text-white font-semibold">{part.slice(2, -2)}</strong>;
+          return <strong key={j} className="text-white font-semibold">{parseLinks(part.slice(2, -2))}</strong>;
         }
-        return part;
+        return <span key={j}>{parseLinks(part)}</span>;
       });
       elements.push(
         <p key={i} className="text-white/70 leading-relaxed mb-3">

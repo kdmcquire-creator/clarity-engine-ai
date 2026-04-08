@@ -89,7 +89,7 @@ ChatGPT is an SEO accelerator, not an SEO replacement. The judgment, the data in
     tags: ["seo-tools", "ahrefs", "semrush", "moz", "comparison"],
     content: `## The SEO Tool Landscape in 2026
 
-The big three — Ahrefs, Semrush, and Moz — have been competing for a decade. Each has iterated significantly, added AI features, and repositioned its pricing. None of them is the clear winner for every use case. The right choice depends on what you're actually trying to do.
+The big three — Ahrefs, Semrush, and [Moz](/go/moz/) — have been competing for a decade. Each has iterated significantly, added AI features, and repositioned its pricing. None of them is the clear winner for every use case. The right choice depends on what you're actually trying to do.
 
 This comparison is based on direct use across all three platforms over the past year, not affiliate relationships or vendor-provided data.
 
@@ -128,14 +128,14 @@ Semrush has evolved into the most comprehensive SEO platform available. Its keyw
 
 **Best for:** Agencies, in-house teams doing both SEO and content marketing, businesses running paid search alongside organic.
 
-## Moz Pro: Best for Beginners and Local SEO
+## [Moz Pro](/go/moz/): Best for Beginners and Local SEO
 
-Moz has lost some market share to Ahrefs and Semrush over the past five years, but it's retained a strong position in two areas: approachability for beginners and local SEO with Moz Local.
+Moz has lost some market share to Ahrefs and Semrush over the past five years, but it's retained a strong position in two areas: approachability for beginners and local SEO with [Moz Local](/go/moz/).
 
 **What it does best:**
 - Beginner-friendly interface and educational resources
 - Domain Authority metric (still widely used as a quick proxy metric)
-- Moz Local for managing local listings and citations
+- [Moz Local](/go/moz/) for managing local listings and citations
 - Keyword Explorer with clear difficulty scoring
 
 **Where it falls short:**
@@ -152,23 +152,23 @@ Moz has lost some market share to Ahrefs and Semrush over the past five years, b
 |------|-----------|----------|-------|
 | Ahrefs | $29/mo (Starter) | $99/mo (Lite) | Starter is limited; Lite is practical minimum |
 | Semrush | $139.95/mo (Pro) | $249.95/mo (Guru) | Free trial available |
-| Moz Pro | $49/mo (Starter) | $99/mo (Standard) | Most affordable full access |
+| [Moz Pro](/go/moz/) | $49/mo (Starter) | $99/mo (Standard) | Most affordable full access |
 
 ## The Right Choice for Your Situation
 
-**You're a solo blogger or small site owner:** Moz Pro or Ahrefs Lite. Moz if you want simplicity, Ahrefs if you're doing any link building.
+**You're a solo blogger or small site owner:** [Moz Pro](/go/moz/) or Ahrefs Lite. Moz if you want simplicity, Ahrefs if you're doing any link building.
 
 **You're an in-house SEO at a mid-size company:** Semrush. The all-in-one platform reduces tool sprawl.
 
 **You're an agency managing 10+ clients:** Ahrefs + Screaming Frog combination, or Semrush's Agency plan.
 
-**You're primarily doing local SEO:** Moz Local + either Ahrefs or Semrush for organic research.
+**You're primarily doing local SEO:** [Moz Local](/go/moz/) + either Ahrefs or Semrush for organic research.
 
 **Budget is tight:** Start with free tools (Google Search Console, Google Analytics, Ubersuggest) until you have enough traffic to justify a paid subscription.
 
 ## Final Verdict
 
-There's no single winner. Ahrefs wins on backlinks. Semrush wins on breadth. Moz wins on accessibility. Most serious SEOs end up with one primary tool and occasionally pull data from competitors' free tiers. Start with the one that matches your primary use case, and don't switch unless you have a specific gap it can't fill.`,
+There's no single winner. Ahrefs wins on backlinks. Semrush wins on breadth. [Moz](/go/moz/) wins on accessibility. Most serious SEOs end up with one primary tool and occasionally pull data from competitors' free tiers. Start with the one that matches your primary use case, and don't switch unless you have a specific gap it can't fill.`,
   },
   {
     slug: "topical-authority-seo-guide",
@@ -806,7 +806,7 @@ When you find cannibalization: consolidate thin overlapping pages into one compr
 
 ## Clustering at Scale
 
-Manual clustering works for lists up to 200–300 keywords. Beyond that, tools like Keyword Insights, SE Ranking, or even a Python script comparing SERP results can automate the grouping.
+Manual clustering works for lists up to 200–300 keywords. Beyond that, tools like Keyword Insights, [SE Ranking](/go/se-ranking/), or even a Python script comparing SERP results can automate the grouping.
 
 The output should be a content map: a spreadsheet listing each cluster, its primary keyword, secondary keywords, estimated search volume, and the URL (existing or planned) that targets it.
 
@@ -1303,7 +1303,7 @@ Never incentivize reviews or use review-gating (only asking happy customers to r
 
 A citation is any online mention of your business name, address, and phone number (NAP). Citations across directories like Yelp, TripAdvisor, Apple Maps, Bing Places, and industry-specific directories signal legitimacy to Google.
 
-The critical requirement: NAP must be exactly consistent across all citations. "123 Main St" vs "123 Main Street" vs "123 Main St." are technically different — inconsistency confuses Google's understanding of your business and weakens your local pack potential. Audit and correct citation inconsistencies using tools like BrightLocal or Moz Local.`,
+The critical requirement: NAP must be exactly consistent across all citations. "123 Main St" vs "123 Main Street" vs "123 Main St." are technically different — inconsistency confuses Google's understanding of your business and weakens your local pack potential. Audit and correct citation inconsistencies using tools like BrightLocal or [Moz Local](/go/moz/).`,
   },
   {
     slug: "seo-audit-checklist-2025",

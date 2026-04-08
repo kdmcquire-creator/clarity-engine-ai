@@ -4,9 +4,9 @@ import { logAffiliateClick, persistAffiliateClick } from "@/lib/analytics";
 
 // Static affiliate links not tied to a specific tool page
 const staticLinks: Record<string, string> = {
-  semrush: "https://www.semrush.com/sem/?ref=clarityengine",
-  ahrefs: "https://ahrefs.com/?ref=clarityengine",
-  surfer: "https://surferseo.com/?via=clarityengine",
+  semrush: "https://www.semrush.com/sem/", // Impact application pending — no tracking yet
+  ahrefs: "https://ahrefs.com/", // No affiliate program available
+  surfer: "https://surferseo.com/", // Affiliate application needed — no tracking yet
   moz: "https://moz.pxf.io/WOOLbM",
   mangools: "https://mangools.com#a69b590a66aee08840d5414cd",
   "mangools-kwfinder": "https://mangools.com/kwfinder#a69b590a66aee08840d5414cd",

@@ -1,6 +1,6 @@
 # Affiliate Tracker — Moonsmoke Network
 > **Master copy.** Mirror this file to each site repo root when updated.
-> Last reviewed: 2026-03-31
+> Last reviewed: 2026-04-07
 
 ---
 
@@ -9,16 +9,13 @@
 | Account | ID / Code | Notes |
 |---------|-----------|-------|
 | Amazon Associates | One account under Moonsmoke | 4 site-specific tracking IDs — see per-site table |
-| Awin Publisher ID | `2805304` | All 4 sites registered as promotional spaces |
+| Awin Publisher ID | `2805304` | Used for all Awin programs |
 | SiteGround afcode | `758135cea38bbc354897accd3183d9ff` | Direct SiteGround program (not Awin) |
 | FreshBooks publisher | ⚠️ **PLACEHOLDER** — see action items | PH uses `1234567` — invalid |
 | Bluehost CJ ID | `7045929` | Impact/CJ network |
-| **CJ Affiliate** | **Account ID: 7916287** | Joined 2026-03-31. 4 promotional properties active. |
 | SE Ranking | `ga=5009081` | Direct program — 30% lifetime recurring |
 | PartnerStack | Moonsmoke Network | Network re-application pending approval |
 | Impact.com | Publisher: Moonsmoke LLC | Semrush pending approval |
-| NordVPN (Awin) | awinmid=15132, awinaffid=2805304 | Switched from Impact 2026-03-30. AM: Andrew Bernato ab@nordvpnmedia.com |
-| Railway | referralCode=IxgLVt | Direct referral program — $5 credit per signup |
 
 ---
 
@@ -32,20 +29,6 @@
 | LegalTech AI Hub (LT) | legaltech-ai-hub.com | `legaltech-ai-hub` | `legaltechhub-20` | `/go/[slug]` |
 
 ---
-
-
----
-
-## CJ Affiliate Account
-
-**Account ID:** 7916287 | Joined: 2026-03-31
-
-| Property Name | CJ Property ID | URL | Status |
-|--------------|---------------|-----|--------|
-| AI Productivity Hub | 101717461 | aiproductivityhub.co | Active |
-| Clarity Engine | 101717462 | clarity-engine.ai | Active |
-| AI Finance Hub | 101717463 | aifinancehub.ai | Active |
-| LegalTech AI Hub | 101717464 | legaltech-ai-hub.com | Active |
 
 ## Program Registry
 
@@ -63,11 +46,10 @@
 | **Resso.ai** | Awin (`awinmid=85741`) | `awinaffid=2805304` | — | — | PH |
 | **Cloudways** | Direct | `id=2102009` | $30+7% recurring or up to $125/sale | 90 days | FH |
 | **Bluehost** | Impact.com | `sjv.io/NG93NP` | $65/sale | 90 days | PH, FH |
-| **NordVPN** | **Awin** (awinmid=15132) | awin1.com/cread.php?awinmid=15132&awinaffid=2805304 | 40% rev share | 30 days | PH, CE, FH, LT |
+| **NordVPN** | Impact.com (`offer_id=15`, `aff_id=142338`) | `go.nordvpn.net/aff_c?offer_id=15&aff_id=142338` | 40% CPS | 30 days | PH, FH, CE, LT |
+| **NordVPN** | Awin | `awinaffid=2805304` | — | — | All (Awin duplicate, joined 2026-03-30) |
 | **SE Ranking** | Direct | `ga=5009081` | 30% lifetime recurring | 120 days | CE |
 | **Mangools** | Direct | `ref=a69b590a66aee08840d5414cd` | 30% recurring lifetime | 30 days | CE |
-| **Moz** | Impact.com | `moz.pxf.io/WOOLbM` | — | — | CE |
-| **Railway** | Direct (referral) | `railway.com?referralCode=IxgLVt` | $5 credit per referral | — | PH, CE |
 
 ---
 
@@ -75,7 +57,7 @@
 
 | Program | Network | Status | Date Applied | Sites |
 |---------|---------|--------|-------------|-------|
-| **Semrush** | Impact.com | DECLINED (low reach) | 2026-03-31 | CE |
+| **Semrush** | Impact.com | Pending | 2026-03-30 | CE |
 | **FreshBooks** | Impact.com | Pending | Pre-2026-03-27 | PH, FH |
 | **monday.com** | PartnerStack | Pending (queued behind network approval) | 2026-03-30 | PH |
 | **Pipedrive** | PartnerStack | Pending (queued behind network approval) | 2026-03-30 | PH |
@@ -84,11 +66,6 @@
 | **Leadpages** | PartnerStack | Pending (queued behind network approval) | 2026-03-30 | CE, PH |
 | **Unbounce** | PartnerStack | Pending (queued behind network approval) | 2026-03-30 | CE, PH |
 | **Webflow** | PartnerStack | Pending (queued behind network approval) | 2026-03-30 | CE |
-| **GoDaddy** | CJ (Advertiser ID: 1513033) | Applied 2026-03-31 | 2026-03-31 | PH, CE, FH, LT |
-| **QuickBooks / Intuit** | CJ (Advertiser ID: 2271086) | Applied 2026-03-31 | 2026-03-31 | FH |
-| **McAfee** | CJ (Advertiser ID: 5306132) | Applied 2026-03-31 | 2026-03-31 | PH, CE, FH, LT |
-| **Norton** | CJ (Advertiser ID: 2102181) | Applied 2026-03-31 | 2026-03-31 | PH, CE, FH, LT |
-| **TurboTax** | CJ (Advertiser ID: 1905878) | Applied 2026-03-31 | 2026-03-31 | FH |
 
 ---
 
@@ -97,9 +74,9 @@
 | Program | Sites | Issue | Fix Needed |
 |---------|-------|-------|------------|
 | **FreshBooks** | PH, FH | ⏳ Application pending approval — placeholder ID `1234567` in place. Clicks tracked but earning nothing until approved. | Send real publisher ID once approved → update `go/[slug]/route.ts` on both PH and FH (one-liner swap) |
-| **Semrush** | CE | Link uses `?ref=clarityengine` — not a real affiliate link, earns nothing | Impact DECLINED 2026-03-31 (low reach). Apply to BeRush direct: semrush.com/lp/affiliate-program/en/ — $200/sale, no traffic minimums. Replace link once approved. |
-| **Surfer SEO** | CE | Link uses `?via=clarityengine` — not a real affiliate link | Apply at surferseo.com/affiliate-program/ → replace with real partner link |
-| ~~**Moz**~~ | ✅ Fixed 2026-03-31 | Approved on Impact. Tracking URL: moz.pxf.io/WOOLbM. `/go/moz` wired on CE. | |
+| **Semrush** | CE | Route `/go/semrush` redirects to semrush.com �� no affiliate tracking | ⏳ Applied on Impact.com 2026-03-30 — pending. Fake `?ref=` param removed 2026-04-07. Replace with real tracking link once approved. Also consider BeRush direct ($200/sale). |
+| **Surfer SEO** | CE | Route `/go/surfer` redirects to surferseo.com — no affiliate tracking | Fake `?via=` param removed 2026-04-07. Apply at surferseo.com/affiliate-program/ → replace with real partner link once approved. |
+| ~~**Moz**~~ | ✅ Fixed 2026-04-07 | Real Impact tracking URL `moz.pxf.io/WOOLbM` wired on CE. `/go/moz` active. |
 | ~~**Mangools**~~ | ✅ Fixed 2026-03-27 | ID `a69b590a66aee08840d5414cd`. Links use `#id` fragment (not `?ref=`). `/go/mangools` + `/go/mangools-kwfinder` wired on CE. |
 
 ---
@@ -110,14 +87,14 @@ These slugs are in `/go/` routes for click tracking, but the destinations have n
 
 | Program | Sites | Current URL | Next Step |
 |---------|-------|-------------|-----------|
-| LegalZoom | LT | `https://www.legalzoom.com` | CJ account now active (ID 7916287) — apply now |
+| LegalZoom | LT | `https://www.legalzoom.com` | Apply to LegalZoom affiliate via CJ or ShareASale |
 | Rocket Lawyer | LT | `https://www.rocketlawyer.com` | Apply to Rocket Lawyer affiliate program |
 | Clio | LT | `https://www.clio.com` | Clio has a partner program — apply |
 | Harvey | LT | `https://www.harvey.ai` | No public affiliate program yet |
 | Ironclad | LT | `https://ironcladapp.com` | No public affiliate program — enterprise-only |
 | Casetext | LT | `https://casetext.com/cocounsel` | Acquired by Thomson Reuters — no affiliate program |
 | Spellbook | LT | `https://www.spellbook.legal` | Check for partner program |
-| **Ahrefs** | CE | `https://ahrefs.com/?ref=clarityengine` | **Ahrefs has no public affiliate program** (discontinued) — remove CE link or replace with Semrush as alternative |
+| **Ahrefs** | CE | `https://ahrefs.com/` | **Ahrefs has no public affiliate program** (discontinued). Fake `?ref=` param removed 2026-04-07. Route kept for click tracking only. |
 
 ---
 
@@ -150,20 +127,23 @@ These slugs are in `/go/` routes for click tracking, but the destinations have n
 | `viralcanvas` | awin1.com → viralcanvas.ai/ | ✅ Awin 124372 |
 | `resso` | awin1.com → resso.ai/signup | ✅ Awin 85741 |
 | `siteground` | siteground.com/?afcode=758135... | ✅ |
-| `nordvpn` | awin1.com/cread.php?awinmid=15132&awinaffid=2805304&clickref= | ✅ Awin (updated 2026-03-30) |
+| `nordvpn` | go.nordvpn.net/aff_c?offer_id=15&aff_id=142338 | ✅ |
 | *tool slugs* | tool.affiliateUrl → tool.websiteUrl | Varies per tool |
 
 ### Clarity Engine (`clarity-engine.ai/go/[slug]`)
 | Slug | Destination | Affiliate? |
 |------|-------------|-----------|
-| `semrush` | semrush.com/sem/?ref=clarityengine | ⚠️ Not a real affiliate link |
-| `ahrefs` | ahrefs.com/?ref=clarityengine | ❌ Ahrefs has no affiliate program |
-| `surfer` | surferseo.com/?via=clarityengine | ⚠️ Not a real affiliate link |
-| `moz` | moz.com/?ref=clarityengine | ⚠️ Not a real affiliate link |
-| `mangools` | mangools.com/?ref=clarityengine | ⚠️ Not a real affiliate link |
+| `semrush` | semrush.com/sem/ | ⚠️ No tracking — Impact pending |
+| `ahrefs` | ahrefs.com/ | ❌ No affiliate program |
+| `surfer` | surferseo.com/ | ⚠️ No tracking — needs application |
+| `moz` | moz.pxf.io/WOOLbM | ✅ Impact approved |
+| `mangools` | mangools.com#a69b590a66aee08840d5414cd | ✅ |
+| `mangools-kwfinder` | mangools.com/kwfinder#a69b590a66aee08840d5414cd | ✅ |
+| `se-ranking` | seranking.com/?ga=5009081 | ✅ |
+| `railway` | railway.com?referralCode=IxgLVt | ✅ |
 | `amazon` | amazon.com/?tag=clarityengine-20 | ✅ |
 | `siteground` | siteground.com/?afcode=758135... | ✅ |
-| `nordvpn` | awin1.com/cread.php?awinmid=15132&awinaffid=2805304&clickref= | ✅ Awin (updated 2026-03-30) |
+| `nordvpn` | go.nordvpn.net/aff_c?offer_id=15&aff_id=142338 | ✅ |
 | *tool slugs* | tool.affiliateUrl (Semrush/Surfer/Ahrefs) | ⚠️ Same placeholder links |
 
 ### AI Finance Hub (`aifinancehub.ai/go/[slug]`)
@@ -174,7 +154,7 @@ These slugs are in `/go/` routes for click tracking, but the destinations have n
 | `bluehost` | bluehost.sjv.io/c/7045929/1376228/11352 | ✅ |
 | `amazon` | amazon.com/?tag=aifinancehub08-20 | ✅ |
 | `siteground` | siteground.com/?afcode=758135... | ✅ |
-| `nordvpn` | awin1.com/cread.php?awinmid=15132&awinaffid=2805304&clickref= | ✅ Awin (updated 2026-03-30) |
+| `nordvpn` | go.nordvpn.net/aff_c?offer_id=15&aff_id=142338 | ✅ |
 | *tool slugs* | tool.affiliateUrl → tool.websiteUrl | Varies per tool |
 
 ### LegalTech AI Hub (`legaltech-ai-hub.com/go/[slug]`)
@@ -189,7 +169,7 @@ These slugs are in `/go/` routes for click tracking, but the destinations have n
 | `spellbook` | spellbook.legal | ❌ Check for program |
 | `amazon` | amazon.com/?tag=legaltechhub-20 | ✅ |
 | `siteground` | siteground.com/?afcode=758135... | ✅ |
-| `nordvpn` | awin1.com/cread.php?awinmid=15132&awinaffid=2805304&clickref= | ✅ Awin (updated 2026-03-30) |
+| `nordvpn` | go.nordvpn.net/aff_c?offer_id=15&aff_id=142338 | ✅ |
 
 ---
 
@@ -222,15 +202,6 @@ Click-through goes to `/go/amazon` → site-specific tracking tag.
 
 ---
 
-
----
-
-## Media Kit
-
-Page live at: **aiproductivityhub.co/media-kit** (built 2026-03-31)
-CE, FH, and LT all have permanent 308 redirects to that page.
-Content: property overview, audience stats, partnership options, affiliate network profiles.
-
 ## Action Items (Priority Order)
 
 ### 🔴 Urgent — Revenue Leakage
@@ -254,7 +225,7 @@ Content: property overview, audience stats, partnership options, affiliate netwo
 
 - [ ] **Add ConvertKit/Kit affiliate to PH** — already on PartnerStack, also has direct program at kit.com/affiliate
 - [ ] **Join ShareASale** — access to WP Engine, OptinMonster, and many SaaS tools relevant to PH/CE
-- [x] **Join CJ Affiliate** — ✅ Account created 2026-03-31 (ID 7916287). Applied: GoDaddy, QuickBooks, McAfee, Norton, TurboTax.
+- [ ] **Join CJ Affiliate** — access to LegalZoom and other legal/finance programs
 - [ ] **Check Rocket Lawyer affiliate program** — currently a bare URL on LT
 - [ ] **Check Spellbook Legal for partner program** — LT reviews them
 - [ ] **Search PartnerStack for Calendly, FreshBooks, Notion** — additional PH/FH programs
@@ -269,4 +240,4 @@ Content: property overview, audience stats, partnership options, affiliate netwo
 
 ---
 
-*Updated: 2026-03-31 — NordVPN switched to Awin, SE Ranking active, CJ account + 4 properties + 5 program applications, PartnerStack 6 programs pending, all 4 sites as Awin promotional spaces, media kit live on PH*
+*Updated: 2026-03-30 — reflects all four live repos + PartnerStack/Awin/Impact applications*
