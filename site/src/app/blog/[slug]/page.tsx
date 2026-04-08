@@ -7,6 +7,7 @@ import SiteGroundLeaderboard from "@/components/SiteGroundLeaderboard";
 import { NordVPNLeaderboard } from "@/components/NordVPNLeaderboard";
 import SidebarAmazon from "@/components/SidebarAmazon";
 import { posts, getPostBySlug, postContent } from "@/lib/blog";
+import RelatedPosts from "@/components/RelatedPosts";
 import type { Metadata } from "next";
 
 interface Props {
@@ -24,6 +25,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: post.title,
     description: post.excerpt,
+    alternates: {
+      canonical: `/blog/${slug}/`,
+    },
     openGraph: {
       title: post.title,
       description: post.excerpt,
@@ -131,7 +135,6 @@ export default async function BlogPostPage({ params }: Props) {
   if (!post) notFound();
 
   const content = postContent[post.slug] || "";
-  const otherPosts = posts.filter((p) => p.slug !== post.slug).slice(0, 3);
 
   const articleJsonLd = {
     "@context": "https://schema.org",
@@ -243,30 +246,11 @@ export default async function BlogPostPage({ params }: Props) {
           </div>
 
           {/* Related posts */}
-          {otherPosts.length > 0 && (
-            <div className="mt-12">
-              <h2
-                className="text-xl font-bold text-white mb-4"
-                style={{ fontFamily: "Syne, sans-serif" }}
-              >
-                More Articles
-              </h2>
-              <div className="grid md:grid-cols-3 gap-4">
-                {otherPosts.map((p) => (
-                  <Link
-                    key={p.slug}
-                    href={`/blog/${p.slug}/`}
-                    className="group bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 rounded-xl p-4 transition-all"
-                  >
-                    <span className="text-xs text-cyan-400 mb-1 block">{p.category}</span>
-                    <h3 className="font-medium text-white group-hover:text-cyan-400 transition text-sm leading-snug">
-                      {p.title}
-                    </h3>
-                  </Link>
-                ))}
-              </div>
-            </div>
-          )}
+          <RelatedPosts
+            currentSlug={post.slug}
+            currentCategory={post.category}
+            currentTags={post.tags}
+          />
         </div>{/* lg:col-span-2 */}
 
           {/* Sidebar — sticky */}

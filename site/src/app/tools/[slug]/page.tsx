@@ -9,6 +9,7 @@ import AffiliateBlock from "@/components/AffiliateBlock";
 import SiteGroundHalfPage from "@/components/SiteGroundHalfPage";
 import MangoolsBanner from "@/components/MangoolsBanner";
 import { tools, getToolBySlug } from "@/lib/tools";
+import RelatedTools from "@/components/RelatedTools";
 
 // Map each CE tool slug to the most relevant Mangools product + theme
 type MangoolsPlacement = {
@@ -1439,31 +1440,10 @@ export default function ToolPage() {
           })()}
 
           {/* Related tools */}
-          <div className="mt-12">
-            <h2
-              className="text-xl font-bold text-white mb-4"
-              style={{ fontFamily: "Syne, sans-serif" }}
-            >
-              More Free Tools
-            </h2>
-            <div className="grid md:grid-cols-3 gap-3">
-              {tools
-                .filter((t) => t.slug !== slug)
-                .slice(0, 3)
-                .map((t) => (
-                  <Link
-                    key={t.slug}
-                    href={`/tools/${t.slug}/`}
-                    className="group bg-white/5 hover:bg-white/10 border border-white/10 hover:border-blue-600/50 rounded-xl p-4 transition-all"
-                  >
-                    <h3 className="font-medium text-white group-hover:text-cyan-400 transition text-sm mb-1">
-                      {t.name}
-                    </h3>
-                    <p className="text-white/40 text-xs">{t.shortDesc}</p>
-                  </Link>
-                ))}
-            </div>
-          </div>
+          <RelatedTools
+            currentSlug={slug}
+            currentCategory={tool.category}
+          />
         </div>
       </main>
       <Footer />
