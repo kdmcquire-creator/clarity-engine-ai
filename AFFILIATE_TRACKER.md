@@ -45,7 +45,7 @@
 | **ViralCanvas.ai** | Awin (`awinmid=124372`) | `awinaffid=2805304` | — | — | PH |
 | **Resso.ai** | Awin (`awinmid=85741`) | `awinaffid=2805304` | — | — | PH |
 | **Cloudways** | Direct | `id=2102009` | $30+7% recurring or up to $125/sale | 90 days | FH |
-| **Bluehost** | Impact.com | `sjv.io/NG93NP` | $65/sale | 90 days | PH, FH |
+| **Bluehost** | Impact.com | `sjv.io/NG93NP` | $65 shared/$500 VPS/$1,500 dedicated/$125 LLM (updated 2026-04-14) | 90 days | PH, FH |
 | **NordVPN** | Impact.com (`offer_id=15`, `aff_id=142338`) | `go.nordvpn.net/aff_c?offer_id=15&aff_id=142338` | 40% CPS | 30 days | PH, FH, CE, LT |
 | **NordVPN** | Awin | `awinaffid=2805304` | — | — | All (Awin duplicate, joined 2026-03-30) |
 | **SE Ranking** | Direct | `ga=5009081` | 30% lifetime recurring | 120 days | CE |
