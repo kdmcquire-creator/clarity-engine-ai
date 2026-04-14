@@ -12,6 +12,78 @@ export type BlogPost = {
 
 export const posts: BlogPost[] = [
   {
+    slug: "moz-ai-research-toolkit-geo-seo-2026",
+    title: "Moz's AI Research Toolkit: What GEO Means for SEO in 2026",
+    excerpt:
+      "Moz just launched an AI Research Toolkit that tracks brand visibility in AI-generated search results. Here's what GEO means for SEO professionals and how to use it.",
+    category: "AI Tools",
+    publishedAt: "2026-04-09",
+    readingTime: 7,
+    author: "CE Editorial Team",
+    tags: ["geo", "moz", "ai-seo", "generative-engine-optimization", "ai-tools"],
+    content: `## AI Search Is Creating a New Visibility Channel
+
+AI-generated answers are now a standard part of how people find information. ChatGPT, Perplexity, Google AI Overviews — each one pulls from existing content to assemble responses, and each one decides which brands and sources to cite. For a growing share of searches, the traditional blue-link SERP isn't the first thing users see.
+
+Most SEO teams aren't tracking any of this. They monitor keyword rankings, organic traffic, and backlink profiles — all of which still matter — but they have no visibility into whether their brand shows up when someone asks an AI assistant a question relevant to their business. That's a blind spot, and it's getting bigger as AI search adoption grows.
+
+The shift doesn't mean traditional SEO is dying. It means there's an additional discovery channel that most teams are ignoring entirely.
+
+## What Moz's AI Research Toolkit Actually Does
+
+[Moz](/go/moz/) recently launched an AI Research Toolkit designed to close that visibility gap. The core functionality is straightforward: you define the prompts and questions that matter to your business, and the toolkit tracks how your brand appears (or doesn't) in AI-generated responses across major AI platforms.
+
+Here's what it covers:
+
+- **Prompt tracking:** Define the questions your target audience is asking AI assistants and monitor them over time.
+- **Brand visibility scoring:** See how often your brand gets cited in AI responses compared to competitors.
+- **Citation position monitoring:** Track where your brand appears within AI-generated answers — whether you're the primary recommendation, a secondary mention, or absent entirely.
+- **Competitive benchmarking:** Compare your AI visibility against specific competitors to identify gaps and opportunities.
+
+The toolkit is available on [Moz](/go/moz/) Pro Medium plans and above, and there's a free 7-day trial if you want to test it before committing. That's enough time to get baseline data on your brand's current AI visibility.
+
+## GEO vs Traditional SEO: What Changes
+
+GEO — Generative Engine Optimization — is the practice of optimizing your content and brand presence specifically for AI-generated search results. It's not a replacement for traditional SEO, but it does require a different mental model.
+
+Here are the key differences:
+
+- **Citations vs blue links.** In traditional SEO, you're competing for page-one positions. In GEO, you're competing for citations within a synthesized AI response. There's no page two — either you're cited or you're not.
+- **Brand mention frequency vs position number one.** Traditional SEO rewards ranking first. GEO rewards being mentioned consistently across many relevant queries. Frequency and breadth of citation matter more than any single ranking.
+- **Topical authority signals vs backlinks.** AI models tend to cite sources they associate with deep, authoritative coverage of a topic. Backlinks still contribute to that authority perception, but the relationship is less direct. Comprehensive, well-structured content that thoroughly addresses a subject performs well in AI citations.
+- **Structured, citable content vs long-form optimization.** AI models prefer content that's easy to extract clear answers from — direct statements, well-organized sections, specific data points. Vague or padded content rarely gets cited.
+
+None of this means you should stop doing traditional SEO. It means the definition of search visibility now includes a channel that operates by different rules.
+
+## The Practical GEO Workflow
+
+If you want to start incorporating GEO into your existing SEO process, here's a practical workflow:
+
+**Step 1: Identify the prompts that matter.** Think about what your target audience asks AI assistants. These aren't always the same as traditional search queries — they tend to be more conversational and specific. "What's the best project management tool for remote teams under 20 people" rather than "best project management software."
+
+**Step 2: Track your brand's AI visibility.** Use [Moz](/go/moz/) Pro's AI Research Toolkit to monitor how your brand appears in AI responses for those prompts. Establish a baseline before making any content changes.
+
+**Step 3: Create content that AI models can cite.** This means structured, authoritative, specific content. Clear headings, direct answers to common questions, concrete data points, and genuine expertise. AI models favor content that provides clear, extractable information over content that buries answers in fluff.
+
+**Step 4: Monitor competitive shifts.** Track how competitor visibility in AI responses changes over time. If a competitor suddenly starts appearing in responses where they didn't before, look at what content they published or updated. That's competitive intelligence you can act on.
+
+## What This Means for Your SEO Strategy
+
+GEO is an additional layer on top of your existing SEO work, not a replacement for it. Traditional organic rankings still drive the majority of search traffic, and that's unlikely to change overnight.
+
+But the trend line matters. AI-assisted search is growing. Google AI Overviews appear on an increasing share of queries. ChatGPT and Perplexity are handling more informational searches every month. If your competitors are showing up in those AI-generated answers and you're not, you're losing a growing share of brand discovery — even if your traditional rankings haven't moved.
+
+The teams that start tracking and optimizing for AI visibility now will have a measurable advantage over those that wait. Like every previous SEO channel shift, the early movers won't need to catch up later.
+
+## Getting Started
+
+The fastest way to understand your current position is to test it. [Moz](/go/moz/) Pro's free 7-day trial gives you access to the full AI Research Toolkit — enough time to check your brand's AI visibility across the prompts that matter to your business and identify the biggest gaps.
+
+Start with 10-15 prompts your audience is likely asking AI assistants, run the analysis, and see where you stand. Then build a content plan around the gaps: topics where competitors are getting cited and you're not.
+
+For teams that want to track traditional SEO metrics alongside AI visibility, pairing Moz's AI data with a tool like [SE Ranking](/go/se-ranking/) for rank tracking, site audits, and backlink monitoring gives you a comprehensive view of both channels without overlap. Traditional and AI search visibility tracked in parallel — that's the baseline for SEO strategy in 2026.`,
+  },
+  {
     slug: "chatgpt-for-seo-complete-guide",
     title: "ChatGPT for SEO: A Complete Guide to AI-Assisted Search Optimization",
     excerpt:
@@ -1489,6 +1561,7 @@ export function getPostBySlug(slug: string) {
 }
 
 export const postContent: Record<string, string> = {
+  "moz-ai-research-toolkit-geo-seo-2026": posts.find(p => p.slug === "moz-ai-research-toolkit-geo-seo-2026")?.content ?? "",
   "seo-fundamentals-2025": posts.find(p => p.slug === "seo-fundamentals-2025")?.content ?? "",
   "keyword-research-guide": posts.find(p => p.slug === "keyword-research-guide")?.content ?? "",
   "content-brief-writing": posts.find(p => p.slug === "content-brief-writing")?.content ?? "",
