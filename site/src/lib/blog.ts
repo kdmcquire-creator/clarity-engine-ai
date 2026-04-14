@@ -12,6 +12,182 @@ export type BlogPost = {
 
 export const posts: BlogPost[] = [
   {
+    slug: "how-to-audit-seo-health-2026",
+    title: "How to Run a Complete SEO Health Audit in 2026",
+    excerpt:
+      "A step-by-step SEO audit framework that covers technical foundations, content quality, and off-page signals — with free tools you can use today.",
+    category: "SEO Strategy",
+    publishedAt: "2026-04-14",
+    readingTime: 7,
+    author: "CE Editorial Team",
+    tags: ["seo-audit", "technical-seo", "seo-strategy", "site-health"],
+    content: `## Why You Need a Regular SEO Health Audit
+
+An SEO audit isn't a one-time project — it's a recurring diagnostic that catches problems before they cost you traffic. Sites that audit quarterly consistently outperform those that only investigate after a traffic drop, because by the time you notice a decline, the underlying issue has been compounding for weeks or months.
+
+The good news: you don't need expensive enterprise tools to run a thorough audit. A combination of free tools — including several you can run right here on Clarity Engine — covers the majority of what matters. Here's the complete framework.
+
+## Step 1: Technical Foundation Check
+
+Technical SEO is the foundation everything else sits on. If search engines can't efficiently crawl and index your site, no amount of great content will save you.
+
+**Crawlability and indexation:**
+- Check Google Search Console's Coverage report for indexation errors, crawl anomalies, and pages excluded from the index.
+- Run your site through our [Page Speed Checker](/tools/page-speed-checker) to identify performance bottlenecks. Target LCP under 2.5 seconds, CLS under 0.1, and INP under 200 milliseconds.
+- Verify your robots.txt isn't accidentally blocking important pages or directories.
+- Submit your XML sitemap in Search Console and confirm all priority pages are included.
+
+**URL structure and redirects:**
+- Use our [URL Structure Analyzer](/tools/url-structure-analyzer) to audit your URL patterns. Clean, descriptive URLs with logical hierarchy still matter.
+- Check for redirect chains (A redirects to B redirects to C). Each hop dilutes link equity and adds latency. Flatten chains to single redirects.
+- Hunt for 404 errors in Search Console and either fix or redirect them.
+
+**Mobile usability:**
+- Run representative pages through our [Mobile-Friendliness Checker](/tools/mobile-friendliness-checker). Google uses mobile-first indexing — if your mobile experience is broken, your rankings suffer regardless of how your desktop site looks.
+- Check font sizes, tap target spacing, and viewport configuration.
+
+## Step 2: On-Page Content Audit
+
+Technical health gets you indexed. Content quality determines where you rank.
+
+**Content quality signals:**
+- Use our [Readability Score](/tools/readability-score) tool on your top 20 pages. Content that's too complex for your audience creates high bounce rates that signal poor relevance to Google.
+- Run your primary pages through the [Content Analysis](/tools/content-analysis) tool to check keyword usage, content depth, and structural quality.
+- Check every page's title tag and meta description with our [Title Tag Optimizer](/tools/title-tag-optimizer) and [Meta Tag Generator](/tools/meta-tag-generator). These are your search result ad copy — weak titles and descriptions kill click-through rates even when you rank well.
+
+**Heading structure:**
+- Use our [Heading Analyzer](/tools/heading-analyzer) to verify logical heading hierarchy on key pages. H1 should be unique per page, and H2/H3 structure should reflect the content's logical organization.
+
+**Schema markup:**
+- Check whether your pages use structured data with our [Schema Markup Generator](/tools/schema-markup-generator). FAQ, Article, HowTo, and Product schemas can earn rich results that dramatically improve click-through rates.
+
+**Duplicate content:**
+- Run your site through the [Duplicate Content Detector](/tools/duplicate-content-detector). Duplicate or near-duplicate pages split ranking signals and confuse Google about which page to serve.
+
+## Step 3: Keyword and Content Gap Analysis
+
+Once your existing pages are optimized, identify what's missing.
+
+- Use the [Keyword Research Tool](/tools/keyword-research-tool) to find relevant terms you're not targeting yet.
+- Run a [Content Gap Analysis](/tools/content-gap-analyzer) to see which topics your competitors cover that you don't.
+- Use the [Content Outline Generator](/tools/content-outline-generator) to plan new content that fills those gaps with proper structure from the start.
+
+For deeper competitive research, tools like [Moz](/go/moz/) and [SE Ranking](/go/se-ranking/) provide backlink analysis, domain authority tracking, and comprehensive keyword databases that go beyond what free tools can offer. [Moz](/go/moz/) Pro's Keyword Explorer is particularly useful for gauging keyword difficulty and discovering related terms, while [SE Ranking](/go/se-ranking/) excels at rank tracking and competitor monitoring.
+
+## Step 4: Internal Linking Audit
+
+Internal links are the connective tissue of your site's topical authority. Poor internal linking leaves ranking potential on the table.
+
+- Use the [Internal Link Analyzer](/tools/internal-link-analyzer) to map your site's link structure and identify orphan pages (pages with no internal links pointing to them).
+- Check that your most important pages receive the most internal links.
+- Verify that anchor text is descriptive and varied — not generic "click here" text.
+
+## Step 5: Off-Page and Competitive Signals
+
+The final layer looks at signals you don't fully control but can influence.
+
+- Use the [Backlink Analyzer](/tools/backlink-analyzer) to review your link profile health. Look for toxic or spammy links that could trigger manual penalties.
+- Run the [Competitor Tracker](/tools/competitor-tracker) to benchmark your performance against key competitors across rankings, content coverage, and domain strength.
+- Check Google Search Console's Manual Actions tab — this should always show zero active issues.
+
+## Building Your Remediation Roadmap
+
+After completing all five steps, you'll have a list of issues. Prioritize them by impact:
+
+1. **Critical technical issues** — crawl blocks, indexation problems, severe speed issues. Fix these first because they affect everything.
+2. **High-impact content fixes** — missing or weak title tags, duplicate content, thin pages on high-value keywords.
+3. **Content gap opportunities** — new content to create based on competitor analysis and keyword research.
+4. **Internal linking improvements** — structural changes that redistribute link equity to priority pages.
+5. **Off-page monitoring** — ongoing backlink health and competitive benchmarking.
+
+Run this full audit quarterly. Between audits, monitor Search Console weekly for new crawl errors, indexation drops, or manual actions. The sites that treat SEO health as an ongoing practice — not an annual project — are the ones that sustain growth through algorithm updates.`,
+  },
+  {
+    slug: "ai-overviews-seo-impact",
+    title: "How Google AI Overviews Are Changing SEO (And What to Do About It)",
+    excerpt:
+      "Google AI Overviews are reshaping organic search by answering queries directly in the SERP. Here's what the data shows and how to adapt your SEO strategy.",
+    category: "AI Tools",
+    publishedAt: "2026-04-14",
+    readingTime: 7,
+    author: "CE Editorial Team",
+    tags: ["ai-overviews", "google", "seo-strategy", "geo", "ai-search"],
+    content: `## The Shift You Can't Ignore
+
+Google AI Overviews — the AI-generated answer boxes that appear at the top of search results — have moved from experiment to default. As of early 2026, they appear on an estimated 30-40 percent of informational queries in the US, and Google continues expanding them to more query types and geographies.
+
+For site owners and SEO professionals, this changes the math. Even if you rank number one organically, a substantial portion of searchers now get their answer directly from the AI Overview without clicking through to any website. The "zero-click search" problem that featured snippets created has been amplified significantly.
+
+But this isn't a death sentence for organic traffic. It's a structural shift that rewards a different kind of optimization — and the sites that adapt are finding new opportunities alongside the challenges.
+
+## What the Data Actually Shows
+
+The impact of AI Overviews varies dramatically by query type:
+
+**High impact (significant traffic loss):** Simple informational queries with definitive answers. "What is ROAS?" or "How many ounces in a cup" — queries where the AI Overview fully satisfies the user's intent. Sites that relied on traffic from these basic queries are seeing measurable declines.
+
+**Moderate impact:** Comparison and evaluation queries. "Best CRM for small business" or "Ahrefs vs Semrush" — the AI Overview provides a summary, but many users still click through for detailed comparisons, reviews, and first-hand experience. Traffic dips are real but manageable.
+
+**Low impact:** Complex, multi-step queries and topics requiring depth. "How to migrate from Salesforce to HubSpot" or "Complete guide to building topical authority" — the AI Overview can only scratch the surface. Users still need comprehensive content, and click-through rates remain relatively stable.
+
+**Potential positive impact:** Queries where your content is cited as a source in the AI Overview. Being cited can actually increase your brand visibility and drive qualified traffic from users who want to go deeper on the AI's recommended sources.
+
+## The Connection to GEO (Generative Engine Optimization)
+
+AI Overviews are part of a broader shift toward what's being called Generative Engine Optimization, or GEO. This is the practice of optimizing content not just for traditional search rankings but for visibility within AI-generated responses — whether those come from Google AI Overviews, ChatGPT, Perplexity, or other AI search tools.
+
+The core insight: AI models cite sources based on different signals than traditional search rankings. Backlinks and domain authority still matter, but AI systems also heavily weight content that provides clear, structured, citable information — direct answers, specific data points, and authoritative statements that can be extracted and referenced.
+
+[Moz](/go/moz/) recently launched an AI Research Toolkit specifically designed to track brand visibility across AI-generated search results. It lets you define the prompts your audience is asking, monitor how your brand appears (or doesn't) in AI responses, and benchmark against competitors. For teams serious about understanding their AI search visibility, it provides data that no traditional SEO tool captures. [Moz](/go/moz/) Pro Medium plans include access, and there's a 7-day free trial to establish your baseline.
+
+## How to Adapt Your SEO Strategy
+
+### 1. Audit Your Traffic by Query Type
+
+Start by categorizing your organic traffic by query intent. In Google Search Console, identify which of your top-performing queries are simple informational queries (high AI Overview risk) versus complex, depth-requiring queries (lower risk).
+
+This tells you where you're most vulnerable and where your traffic is likely stable. Don't panic about overall traffic numbers — understand the composition.
+
+### 2. Shift Content Investment Toward Depth
+
+The queries that AI Overviews handle well are the ones that required the least depth to answer in the first place. The strategic response is to invest more in content that AI can't easily replicate:
+
+- **Original research and data.** AI Overviews can synthesize existing information, but they can't generate original survey data, case studies, or test results.
+- **First-hand experience.** Detailed walkthroughs of actual implementations, with screenshots, specific results, and honest assessments of what worked and what didn't.
+- **Comprehensive multi-step guides.** Content that requires sustained engagement — the kind of depth that an AI Overview summary can't replace.
+- **Expert opinion and analysis.** Genuine perspective on industry trends, informed by real experience. AI can summarize what others have said; it can't form an original expert opinion.
+
+### 3. Optimize for AI Citations
+
+If you can't beat AI Overviews, get cited by them. Content that tends to get cited shares specific characteristics:
+
+- **Clear, direct statements.** AI models prefer content where key information is stated directly rather than buried in narrative. Lead with the answer, then explain.
+- **Structured data and formatting.** Well-organized content with clear headings, bullet points, and tables is easier for AI to parse and extract citations from.
+- **Authoritative sourcing.** Content that cites credible data sources and demonstrates expertise signals the kind of trustworthiness AI models weight when selecting sources.
+- **Specific, quantifiable claims.** "Companies that implement structured data see a 25% increase in CTR" is more citable than "structured data can improve click-through rates."
+
+### 4. Diversify Your Traffic Sources
+
+Over-dependence on Google organic traffic has always been risky. AI Overviews make diversification more urgent:
+
+- Build an email list that you own and control.
+- Invest in content for platforms where AI Overviews don't exist — YouTube, newsletters, podcasts.
+- Develop direct traffic through brand building and audience loyalty.
+- Consider whether some of your content strategy should target queries that AI Overviews handle poorly — subjective, nuanced, or highly specific topics.
+
+### 5. Track AI Visibility as a Metric
+
+Traditional rank tracking no longer tells the complete story. You need to know whether your brand appears in AI-generated responses for your target queries — and whether that appearance drives traffic or substitutes for it.
+
+[Moz](/go/moz/) Pro's AI Research Toolkit provides this data. Set up tracking for 15-20 of your most important queries, establish a baseline, and monitor how your AI visibility changes as you optimize content. Pair it with a traditional rank tracker like [SE Ranking](/go/se-ranking/) to see both channels side by side.
+
+## The Bigger Picture
+
+AI Overviews are not the end of SEO. They're the end of a specific kind of SEO — the kind that relied on ranking for simple queries that a single sentence could answer. That traffic was always the most vulnerable to disruption, and it's been eroding since featured snippets launched years ago. AI Overviews just accelerated the trend.
+
+The sites that thrive in this environment are the ones that provide genuine depth, original insight, and first-hand expertise that AI can't replicate and may even cite. That's always been the best SEO strategy. The difference now is that there's less room for anything else.`,
+  },
+  {
     slug: "moz-ai-research-toolkit-geo-seo-2026",
     title: "Moz's AI Research Toolkit: What GEO Means for SEO in 2026",
     excerpt:
