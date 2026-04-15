@@ -8,6 +8,7 @@ import Footer from "@/components/Footer";
 import AffiliateBlock from "@/components/AffiliateBlock";
 import SiteGroundHalfPage from "@/components/SiteGroundHalfPage";
 import MangoolsBanner from "@/components/MangoolsBanner";
+import SeRankingBanner from "@/components/SeRankingBanner";
 import { tools, getToolBySlug } from "@/lib/tools";
 import RelatedTools from "@/components/RelatedTools";
 
@@ -1458,6 +1459,10 @@ export default function ToolPage() {
               </div>
             );
           })()}
+
+          {/* SE Ranking compact sponsor banner — alternate rotation to Mangools */}
+          <SeRankingBanner size="compact" />
+
 
           {/* Related tools */}
           <RelatedTools

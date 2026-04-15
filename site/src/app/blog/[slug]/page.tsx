@@ -6,6 +6,7 @@ import SiteGroundBanner from "@/components/SiteGroundBanner";
 import SiteGroundLeaderboard from "@/components/SiteGroundLeaderboard";
 import { NordVPNLeaderboard } from "@/components/NordVPNLeaderboard";
 import SidebarAmazon from "@/components/SidebarAmazon";
+import SeRankingBanner from "@/components/SeRankingBanner";
 import { posts, getPostBySlug, postContent } from "@/lib/blog";
 import RelatedPosts from "@/components/RelatedPosts";
 import type { Metadata } from "next";
@@ -143,8 +144,17 @@ export default async function BlogPostPage({ params }: Props) {
     description: post.excerpt,
     datePublished: post.publishedAt,
     dateModified: post.publishedAt,
-    author: { "@type": "Organization", name: "Clarity Engine AI", url: "https://clarity-engine.ai" },
-    publisher: { "@type": "Organization", name: "Clarity Engine AI", url: "https://clarity-engine.ai" },
+    author: {
+      "@type": "Organization",
+      name: "The Clarity Engine Editorial Team",
+      url: "https://clarity-engine.ai/about/editorial-team/",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Clarity Engine AI",
+      url: "https://clarity-engine.ai",
+      logo: "https://clarity-engine.ai/moonsmoke/logo.png",
+    },
     mainEntityOfPage: { "@type": "WebPage", "@id": `https://clarity-engine.ai/blog/${post.slug}/` },
   };
 
@@ -222,6 +232,9 @@ export default async function BlogPostPage({ params }: Props) {
 
           {/* SiteGround banner */}
           <SiteGroundBanner />
+
+          {/* SE Ranking inline sponsor — full banner after article body */}
+          <SeRankingBanner size="full" />
 
           {/* Post-article sponsor */}
           <NordVPNLeaderboard />

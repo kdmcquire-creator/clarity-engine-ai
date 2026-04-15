@@ -45,8 +45,14 @@ const jsonLd = {
       "@id": "https://clarity-engine.ai/#organization",
       name: "Clarity Engine AI",
       url: "https://clarity-engine.ai",
+      logo: "https://clarity-engine.ai/moonsmoke/logo.png",
       description:
         "Free SEO and content marketing tools to help you rank higher, write better, and grow faster",
+      sameAs: [
+        "https://www.linkedin.com/company/moonsmoke/",
+        "https://twitter.com/MoonsmokeNetwrk",
+        "https://www.pinterest.com/moonsmokecontent/",
+      ],
       contactPoint: {
         "@type": "ContactPoint",
         contactType: "Customer Support",

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -128,6 +129,25 @@ export default function Footer() {
           >
             clarity-engine.ai
           </a>
+        </div>
+        {/* Published by Moonsmoke LLC */}
+        <div className="border-t border-white/10 mt-6 pt-4 flex items-center justify-center gap-2 text-xs text-white/40">
+          <Image
+            src="/moonsmoke/logo.png"
+            alt="Moonsmoke LLC"
+            width={24}
+            height={24}
+            className="rounded"
+          />
+          <span>
+            Published by Moonsmoke LLC &bull; Austin, Texas &bull;{" "}
+            <Link
+              href="/about/editorial-team/"
+              className="hover:text-cyan-400 transition underline"
+            >
+              Editorial Team
+            </Link>
+          </span>
         </div>
       </div>
     </footer>

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SeRankingBanner from "@/components/SeRankingBanner";
 import { tools } from "@/lib/tools";
 import { posts } from "@/lib/blog";
 
@@ -143,6 +144,13 @@ export default function HomePage() {
                 </div>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* SE Ranking sponsored banner — below-the-fold, between Why CE and blog preview */}
+        <section className="px-4">
+          <div className="container mx-auto max-w-5xl">
+            <SeRankingBanner size="full" />
           </div>
         </section>
 
