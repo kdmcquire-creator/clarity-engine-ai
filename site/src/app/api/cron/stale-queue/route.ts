@@ -1,8 +1,12 @@
 import { NextResponse } from "next/server";
 import { verifyCronAuth } from "@/lib/cron-auth";
 import { posts } from "@/lib/blog";
+import { submitToIndexNow } from "@/lib/index-now";
 
 const STALE_DAYS = parseInt(process.env.STALE_DAYS || "90", 10);
+const HOST = "clarity-engine.ai";
+const BASE_URL = `https://${HOST}`;
+const INDEXNOW_RECENT_POSTS = 10;
 
 interface StalePostReport {
   slug: string;
@@ -81,5 +85,41 @@ export async function POST(request: Request) {
     }
   }
 
-  return NextResponse.json({ summary, stalePosts });
+  // ─── IndexNow ping ────────────────────────────────────────────────────────
+  // Notify Bing/Yandex (and signal Google) to recrawl recent content.
+  let indexNowResult: { success: boolean; urlCount: number; error?: string } = {
+    success: false,
+    urlCount: 0,
+  };
+  try {
+    const recentPostUrls = [...posts]
+      .sort((a, b) => (b.publishedAt || "").localeCompare(a.publishedAt || ""))
+      .slice(0, INDEXNOW_RECENT_POSTS)
+      .map((p) => `${BASE_URL}/blog/${p.slug}/`);
+
+    const urls = [`${BASE_URL}/`, ...recentPostUrls];
+    const result = await submitToIndexNow(HOST, urls);
+    indexNowResult = {
+      success: result.success,
+      urlCount: urls.length,
+      error: result.error,
+    };
+    console.log(
+      JSON.stringify({
+        type: "stale_queue_indexnow_ping",
+        success: result.success,
+        urlCount: urls.length,
+        error: result.error,
+      }),
+    );
+  } catch (err) {
+    console.error(
+      JSON.stringify({
+        type: "stale_queue_indexnow_error",
+        error: err instanceof Error ? err.message : "Unknown",
+      }),
+    );
+  }
+
+  return NextResponse.json({ summary, stalePosts, indexNow: indexNowResult });
 }

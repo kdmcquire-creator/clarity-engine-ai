@@ -1352,7 +1352,27 @@ export default function ToolPage() {
     name: tool.name,
     description: tool.description,
     applicationCategory: tool.category,
+    applicationSubCategory: "SEOTool",
+    operatingSystem: "Web",
     url: `https://clarity-engine.ai/tools/${tool.slug}/`,
+    isAccessibleForFree: true,
+    offers: {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "USD",
+      availability: "https://schema.org/InStock",
+    },
+    featureList: tool.features,
+    creator: {
+      "@type": "Organization",
+      name: "Clarity Engine AI",
+      url: "https://clarity-engine.ai",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Clarity Engine AI",
+      url: "https://clarity-engine.ai",
+    },
   };
 
   const breadcrumbJsonLd = {
