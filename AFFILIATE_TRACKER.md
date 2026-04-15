@@ -1,6 +1,6 @@
 # Affiliate Tracker — Moonsmoke Network
 > **Master copy.** Mirror this file to each site repo root when updated.
-> Last reviewed: 2026-04-09
+> Last reviewed: 2026-04-15 (15 vetted CJ programs applied — full pending queue is now 18)
 
 ---
 
@@ -66,6 +66,26 @@
 | **Leadpages** | PartnerStack | Pending (queued behind network approval) | 2026-03-30 | CE, PH |
 | **Unbounce** | PartnerStack | Pending (queued behind network approval) | 2026-03-30 | CE, PH |
 | **Webflow** | PartnerStack | Pending (queued behind network approval) | 2026-03-30 | CE |
+| **Intuit Small Business** (QuickBooks/GoPayment/Payroll) | CJ (id 2271086) | Pending — pre-audit | Pre-2026-04-09 | FH, PH |
+| **Norton (North America)** | CJ (id 2102181) | Pending — pre-audit | Pre-2026-04-09 | PH, FH, LT |
+| **TurboTax (Intuit)** | CJ (id 1905878) | Pending — pre-audit | Pre-2026-04-09 | FH |
+| **WillMaker – Nolo** (estate planning) | CJ (id 3906677) | Pending | 2026-04-15 | LT |
+| **Everplans** (estate planning) | CJ (id 6031460) | Pending | 2026-04-15 | LT |
+| **ADP (Payroll)** | CJ (id 5275573) | Pending — $2,873 EPC | 2026-04-15 | FH |
+| **TruthFinder + OmniWatch** | CJ (id 7604307) | Pending — $332 EPC | 2026-04-15 | LT, PH |
+| **Mailchimp** | CJ (id 6008571) | Pending — $107 EPC | 2026-04-15 | PH, CE, FH |
+| **Google Cloud NA** | CJ (id 5930067) | Pending — $500/lead | 2026-04-15 | PH, CE |
+| **Ubersuggest (Neil Patel)** | CJ (id 7116473) | Pending | 2026-04-15 | CE |
+| **NordLayer** (biz NordVPN) | CJ (id 5600250) | Pending — 20% | 2026-04-15 | PH, FH |
+| **DigitalOcean** | CJ (id 6776953) | Pending — 10% | 2026-04-15 | PH, CE |
+| **Slack** | CJ (id 6504591) | Pending | 2026-04-15 | PH |
+| **Stamps.com** | CJ (id 1460764) | Pending | 2026-04-15 | LT, PH |
+| **eFax** | CJ (id 1388074) | Pending | 2026-04-15 | LT |
+| **MetroFax** | CJ (id 5577570) | Pending | 2026-04-15 | LT |
+| **AT&T Business** | CJ (id 4842213) | Pending | 2026-04-15 | PH, FH |
+| **Verizon Business** | CJ (id 5067409) | Pending | 2026-04-15 | PH, FH |
+| **Meta for Business** | CJ (id 6883920) | Pending | 2026-04-15 | PH |
+| **SRFax** | CJ (id 5735422) | Pending | 2026-04-15 | LT |
 
 ---
 
